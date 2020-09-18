@@ -1,4 +1,4 @@
-from api import app
+from app import app
 
 @app.route('/', methods=['GET'])
 def home():
