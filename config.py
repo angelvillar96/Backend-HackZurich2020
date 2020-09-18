@@ -1,2 +1,3 @@
 class Config(object):
     SECRET_KEY = 'TEST'
+    FOOD_RECOGNITION_KEY = "9e549542cb924460bcea95b91f7c614c138a7071"

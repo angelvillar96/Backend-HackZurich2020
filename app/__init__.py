@@ -5,4 +5,4 @@ from config import Config
 app = Flask(__name__)
 app.config.from_object(Config)
 
-from api import endpoints, models
+from app import endpoints, models
