@@ -4,7 +4,9 @@ and passed user behavior
 """
 
 from config import Config
+from datetime import datetime
 
+import numpy as np
 
 def filter_sort_recipes(recipes, username):
     """
@@ -31,11 +33,11 @@ def _filter_recipes(recipes, user):
     filtered_recipes = []
     for recipe in recipes:
         # excluding recipes that do not compeil with the dietary restrictions
-        if(("Vegan" not in recipe["nutrition_type"] and user.restrictions.vegan is True):
+        if("Vegan" not in recipe["nutrition_type"] and user.restrictions.vegan is True):
             continue
-        if(("Vegetarish" not in recipe["nutrition_type"]and user.restrictions.vegetarian is True):
+        if("Vegetarish" not in recipe["nutrition_type"]and user.restrictions.vegetarian is True):
             continue
-        if(("Milchprodukte" not in recipe["allergens"] and user.restrictions.lactose_intolerant is True):
+        if("Milchprodukte" not in recipe["allergens"] and user.restrictions.lactose_intolerant is True):
             continue
 
         # excluding recipes that do not compeil with the low-carb threshold
@@ -59,8 +61,25 @@ def _sort_recipes(recipes, user):
     Sorting the recipes based on some helth-based value
     """
 
-    return recipes
+    sorted_recipes = []
+    date = datetime.today().strftime('%d.%m.%Y')
+    food_today = user.food.filter_by(date_consumed=date).all()
+    total_calories = sum([f.calories for f in food_today])
+    calory_limit = user.calories
 
+    exceed, dont_exceed = [], []
+    for recipe in sorted_recipes:
+        cur_calories = recipe["general_info"]["nutrition"]["calories"]
+        if(cur_calories + total_calories > calory_limit):
+            exceed.append(recipe)
+        else:
+            dont_exceed.append(recipe)
+
+    sorted_exceed = sorted(exceed, key = lambda i: i["general_info"]["nutrition"]["fat"])
+    sorted_dont = sorted(dont_exceed, key = lambda i: i["general_info"]["nutrition"]["fat"])
+    sorted_recipes = sorted_dont + sorted_exceed
+
+    return sorted_recipes
 
 
 def _get_restictions(username):
