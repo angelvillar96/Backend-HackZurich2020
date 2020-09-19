@@ -1,676 +1,270 @@
 [
   {
-    "id": "64068",
-    "score": 5.2264857,
+    "id": "39459",
+    "score": 6.572678,
     "general_info": {
-      "title": "Kochbananen-Kokosnuss-Suppe mit Zander",
-      "teaser": "Suppe mit Banane und Fisch? Dieses herrlich aromatische Hauptgericht überrascht mit zarten Zanderwürfeln, Kokosmilch und gedünsteten Kochbananenstücken.",
+      "title": "Bananen-Crème-brûlée mit Tonkabohne",
+      "teaser": "Mit Tonkabohne, die ein bisschen wie Vanille schmeckt, wird die Bananen-Crème-brûlée gewürzt. Tonkabohne ist für Kinder unter 6 Jahren nicht geeignet.",
       "nutrition": {
-        "calories": 590,
-        "carbohydrates": 59,
-        "carbohydrates_percent": 40.6,
-        "fat": 29,
-        "fat_percent": 44.9,
-        "kilojoule": 2500,
-        "proteins": 21,
-        "proteins_percent": 14.5
+        "calories": 460,
+        "carbohydrates": 35,
+        "carbohydrates_percent": 31.3,
+        "fat": 31,
+        "fat_percent": 62.4,
+        "kilojoule": 1900,
+        "proteins": 7,
+        "proteins_percent": 6.3
       },
-      "image_url": "https://recipeimages.migros.ch/medium/d8b911def8e42edd063be0e98ddc881417d80093/kochbananen-kokosnuss-suppe-mit-zander-0-4-3.jpg"
+      "image_url": "https://recipeimages.migros.ch/medium/89a80f57de75385c9d41a026a6ada98297218665/bananen-creme-brulee-mit-tonkabohne-0-4-3.jpg"
     },
     "cooking_instructions": {
-      "time": 50,
-      "instructions": "Bananenschale entfernen. Bananen in Würfel à ca. 1 cm schneiden. Zwiebel hacken. Koriander samt Stielen zerkleinern. Karotten längs vierteln und fein schneiden. Limette in Schnitze, Zanderfilets in Würfel schneiden.",
+      "time": 280,
+      "instructions": "Banane in Stücke schneiden. Mit Rahm und Milch aufkochen. Etwas Tonkabohne fein dazureiben. Mischung ca. 20 Minuten ziehen lassen. Durch ein feines Sieb streichen. Zucker, Eigelb und Maisstärke verrühren. Rahm-Milch-Mischung unter Rühren dazugeben. Alles in eine saubere Pfanne geben. Unter ständigem Rühren bis kurz vor den Siedepunkt erhitzen, bis die Creme bindet. Masse in die Förmchen füllen. Zugedeckt mindestens 4 Stunden kühl stellen.",
       "ingredients": {
         "ingredients": [
-          "Kochbanane",
-          "Wasser",
-          "Karotte",
-          "Knoblauchzehe",
-          "Koriander",
-          "Kokosmilch",
-          "Limette",
-          "Rapsöl",
-          "Zanderfilet",
-          "Kaffirlimettenblatt",
-          "Zwiebel",
-          "Sojasauce",
-          "gelbe Currypaste"
+          "Banane",
+          "Milch",
+          "Rahm",
+          "Maisstärke",
+          "Eigelb",
+          "Tonkabohne",
+          "feinster Zucker",
+          "Zucker"
         ],
         "sizes": {
-          "2 Personen": {
-            "Kochbanane, ca. 350 g": "1",
-            "Zwiebel": "½",
-            "Koriander": "¼ Bund",
-            "Karotten": "75 g",
-            "Limette": "½",
-            "Zanderfilets": "150 g",
-            "Rapsöl": "1 EL",
-            "Kaffirlimettenblätter": "2,5",
-            "Knoblauchzehe": "½",
-            "gelbe Currypaste": "¾ EL",
-            "Kokosmilch": "2,5 dl",
-            "Wasser": "4 dl",
-            "Sojasauce": "2½ EL"
-          },
           "4 Personen": {
-            "Kochbananen, ca. 700 g": "2",
-            "Zwiebel": "1",
-            "Koriander": "½ Bund",
-            "Karotten": "150 g",
-            "Limette": "1",
-            "Zanderfilets": "300 g",
-            "Rapsöl": "2 EL",
-            "Kaffirlimettenblätter": "5",
-            "Knoblauchzehe": "1",
-            "gelbe Currypaste": "1½ EL",
-            "Kokosmilch": "5 dl",
-            "Wasser": "8 dl",
-            "Sojasauce": "5 EL"
+            "reife Banane": "1",
+            "Rahm": "2,5 dl",
+            "Milch": "1,5 dl",
+            "Tonkabohne*": "etwas",
+            "Zucker": "45 g",
+            "Eigelb": "4",
+            "Maisstärke": "2 EL"
           },
           "8 Personen": {
-            "Kochbananen, ca. 1,4 kg": "4",
-            "Zwiebeln": "2",
-            "Koriander": "1 Bund",
-            "Karotten": "300 g",
-            "Limetten": "2",
-            "Zanderfilets": "600 g",
-            "Rapsöl": "4 EL",
-            "Kaffirlimettenblätter": "10",
-            "Knoblauchzehen": "2",
-            "gelbe Currypaste": "3 EL",
-            "Kokosmilch": "1 l",
-            "Wasser": "1,6 l",
-            "Sojasauce": "1 dl"
+            "reife Bananen": "2",
+            "Rahm": "5 dl",
+            "Milch": "3 dl",
+            "Tonkabohne*": "etwas",
+            "Zucker": "90 g",
+            "Eigelb": "8",
+            "Maisstärke": "4 EL"
           },
           "12 Personen": {
-            "Kochbananen, ca. 2,1 kg": "6",
-            "Zwiebeln": "3",
-            "Koriander": "1½ Bund",
-            "Karotten": "450 g",
-            "Limetten": "3",
-            "Zanderfilets": "900 g",
-            "Rapsöl": "6 EL",
-            "Kaffirlimettenblätter": "15",
-            "Knoblauchzehen": "3",
-            "gelbe Currypaste": "4½ EL",
-            "Kokosmilch": "1,5 l",
-            "Wasser": "2,4 l",
-            "Sojasauce": "1,5 dl"
+            "reife Bananen": "3",
+            "Rahm": "7,5 dl",
+            "Milch": "4,5 dl",
+            "Tonkabohne*": "etwas",
+            "Zucker": "135 g",
+            "Eigelb": "12",
+            "Maisstärke": "6 EL"
           }
         }
       }
     },
     "allergens": [
       "Früchte",
-      "Zwiebel",
-      "Gemüse",
-      "Fisch",
-      "Knoblauch",
-      "Meeresfrüchte",
-      "Weizen",
-      "Nüsse und Kerne"
-    ],
-    "nutrition_type": [
-      "Fleisch/Fisch"
-    ],
-    "tags": [
-      "Fleisch/Fisch",
-      "Einsteiger",
-      "Mittelamerika und Karibik",
-      "Frühling",
-      "Herbst",
-      "Winter"
-    ]
-  },
-  {
-    "id": "24713",
-    "score": 5.2264857,
-    "general_info": {
-      "title": "Poulet-Tortillas",
-      "teaser": "Mexiko lässt grüssen: Tortillas, prall gefüllt mit Pouletgeschnetzeltem, Maiskörnern, Karotten, Wirz und Salat sowie Tomatensauce und Crème fraîche.",
-      "nutrition": {
-        "calories": 660,
-        "carbohydrates": 68,
-        "carbohydrates_percent": 42.5,
-        "fat": 24,
-        "fat_percent": 33.8,
-        "kilojoule": 2750,
-        "proteins": 38,
-        "proteins_percent": 23.8
-      },
-      "image_url": "https://recipeimages.migros.ch/medium/d589e7ac10bf5f7b10ba835b8ebc80bfaee62d51/poulet-tortillas-0-4-3.jpg"
-    },
-    "cooking_instructions": {
-      "time": 50,
-      "instructions": "Zwiebeln und Knoblauch fein hacken. Mit Tomaten aufkochen. Sauce mit Tabasco, Zimt und Salz würzen. Ca. 30 Minuten zugedeckt kochen.",
-      "ingredients": {
-        "ingredients": [
-          "gehackte geschälte Tomaten",
-          "gekochter Maiskolben",
-          "Karotte",
-          "Knoblauchzehe",
-          "Schnittsalat",
-          "Weizentortilla (Soft Tortilla)",
-          "Crème fraîche",
-          "Olivenöl",
-          "Pouletgeschnetzeltes",
-          "Pfeffer",
-          "Wirz",
-          "Zwiebel",
-          "Salz",
-          "Zimt",
-          "Tabasco"
-        ],
-        "sizes": {
-          "4 Personen": {
-            "Zwiebeln": "2",
-            "Knoblauchzehen": "2",
-            "gehackte geschälte Tomaten à 400 g": "1 Dose",
-            "Tabasco": "½ TL",
-            "Zimt": "½ TL",
-            "Salz": "",
-            "Pfeffer": "",
-            "Pouletgeschnetzeltes": "400 g",
-            "Olivenöl": "2 EL",
-            "gekochter Maiskolben": "1",
-            "Karotte": "1",
-            "Wirz": "100 g",
-            "Tortillas": "8",
-            "Crème fraîche": "4 EL",
-            "Schnittsalat": "50 g"
-          },
-          "8 Personen": {
-            "Zwiebeln": "4",
-            "Knoblauchzehen": "4",
-            "gehackte geschälte Tomaten à 400 g": "2 Dosen",
-            "Tabasco": "1 TL",
-            "Zimt": "1 TL",
-            "Salz": "",
-            "Pfeffer": "",
-            "Pouletgeschnetzeltes": "800 g",
-            "Olivenöl": "4 EL",
-            "gekochte Maiskolben": "2",
-            "Karotten": "2",
-            "Wirz": "200 g",
-            "Tortillas": "16",
-            "Crème fraîche": "8 EL",
-            "Schnittsalat": "100 g"
-          },
-          "12 Personen": {
-            "Zwiebeln": "6",
-            "Knoblauchzehen": "6",
-            "gehackte geschälte Tomaten à 400 g": "3 Dosen",
-            "Tabasco": "1½ TL",
-            "Zimt": "1½ TL",
-            "Salz": "",
-            "Pfeffer": "",
-            "Pouletgeschnetzeltes": "1,2 kg",
-            "Olivenöl": "6 EL",
-            "gekochte Maiskolben": "3",
-            "Karotten": "3",
-            "Wirz": "300 g",
-            "Tortillas": "24",
-            "Crème fraîche": "160 g",
-            "Schnittsalat": "150 g"
-          }
-        }
-      }
-    },
-    "allergens": [
-      "Zwiebel",
-      "Knoblauch",
-      "Gemüse",
-      "Weizen",
-      "Geflügel",
-      "Milchprodukte"
-    ],
-    "nutrition_type": [
-      "Fleisch/Fisch"
-    ],
-    "tags": [
-      "Fleisch/Fisch",
-      "Einsteiger",
-      "Mexiko",
-      "Herbst",
-      "Sommer"
-    ]
-  },
-  {
-    "id": "39739",
-    "score": 5.2264857,
-    "general_info": {
-      "title": "Polentaschnitten",
-      "teaser": "Zu viel Polenta gekocht? Prima! Kalte Polenta einfach in Quadrate schneiden, auf Spinat und Karotten legen und im Ofen mit Ricotta und Käse gratinieren.",
-      "nutrition": {
-        "calories": 260,
-        "carbohydrates": 31,
-        "carbohydrates_percent": 50.6,
-        "fat": 9,
-        "fat_percent": 33.1,
-        "kilojoule": 1100,
-        "proteins": 10,
-        "proteins_percent": 16.3
-      },
-      "image_url": "https://recipeimages.migros.ch/medium/c10826edec8b333ddef21c6f6e031cedaedd03c6/polentaschnitten-0-4-3.jpg"
-    },
-    "cooking_instructions": {
-      "time": 40,
-      "instructions": "Polenta in Quadrate schneiden. Zwiebel schälen und hacken. Karotte schälen, längs vierteln und fein schneiden. Ricotta und Käse mischen. Mit Salz und Pfeffer würzen. Öl in einer Bratpfanne erhitzen. Karotte und Zwiebel beigeben, ca. 5 Minuten dünsten. Spinat waschen, abtropfen lassen. Zur Karotte geben, zugedeckt dünsten, bis er zusammenfällt. Gemüse in eine ofenfeste Form geben. Mit Salz und Pfeffer würzen. Polenta auf das Gemüse legen, mit Ricotta bestreichen. Form in die Ofenmitte stellen. Backofen auf 200 °C Ober- und Unterhitze einstellen. Gratin ca. 20 Minuten überbacken.",
-      "ingredients": {
-        "ingredients": [
-          "Karotte",
-          "Reibkäse",
-          "Ricotta",
-          "gekochte Polenta",
-          "Olivenöl",
-          "Pfeffer",
-          "Zwiebel",
-          "Spinat",
-          "Salz"
-        ],
-        "sizes": {
-          "4 Personen": {
-            "gekochte Polenta": "600 g",
-            "Zwiebel": "1",
-            "Karotte à ca. 100 g": "1",
-            "Ricotta": "100 g",
-            "Reibkäse": "30 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Olivenöl": "1 EL",
-            "Spinat": "300 g"
-          },
-          "8 Personen": {
-            "gekochte Polenta": "1,2 kg",
-            "Zwiebeln": "2",
-            "Karotten à ca. 100 g": "2",
-            "Ricotta": "200 g",
-            "Reibkäse": "60 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Olivenöl": "2 EL",
-            "Spinat": "600 g"
-          },
-          "12 Personen": {
-            "gekochte Polenta": "1,8 kg",
-            "Zwiebeln": "3",
-            "Karotten à ca. 100 g": "3",
-            "Ricotta": "300 g",
-            "Reibkäse": "90 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Olivenöl": "3 EL",
-            "Spinat": "900 g"
-          }
-        }
-      }
-    },
-    "allergens": [
-      "Zwiebel",
-      "Gemüse",
-      "Milchprodukte"
-    ],
-    "nutrition_type": [
-      "Vegetarisch"
-    ],
-    "tags": [
-      "Vegetarisch",
-      "Einsteiger",
-      "Schweiz",
-      "Frühling",
-      "Herbst",
-      "Sommer"
-    ]
-  },
-  {
-    "id": "22764",
-    "score": 5.2264857,
-    "general_info": {
-      "title": "Schweinsragout mit Karotten und Ananas",
-      "teaser": "Ein Eintopf mit exotischer Note. Schweinsragout, geschmort mit Gemüse und Ananas, gewürzt mit Curry. Zusammen mit Basmatireis ein wunderbares Wintergericht.",
-      "nutrition": {
-        "calories": 350,
-        "carbohydrates": 20,
-        "carbohydrates_percent": 24.7,
-        "fat": 16,
-        "fat_percent": 44.4,
-        "kilojoule": 1450,
-        "proteins": 25,
-        "proteins_percent": 30.9
-      },
-      "image_url": "https://recipeimages.migros.ch/medium/1e11ec6bff1679a824f200c53c9c5ae802e6e162/schweinsragout-mit-karotten-und-ananas-0-4-3.jpg"
-    },
-    "cooking_instructions": {
-      "time": 70,
-      "instructions": "Zwiebeln je nach Grösse halbieren. Karotten in Rädchen schneiden. Ragout mit Salz und Pfeffer würzen. Fleisch und Zwiebeln in einem Bräter im Öl bei mittlerer Hitze ca. 10 Minuten hellbraun dünsten. Karotten beigeben. Alles mit Mehl und Curry bestäuben und gut mischen. Das Ragout mit Bouillon ablöschen. Zugedeckt bei mittlerer Hitze ca. 50 Minuten weich schmoren.",
-      "ingredients": {
-        "ingredients": [
-          "Ananas",
-          "Karotte",
-          "Saucenzwiebelchen",
-          "Salbei",
-          "Sonnenblumenöl",
-          "Schweinsragout",
-          "Madras-Curry",
-          "Pfeffer",
-          "Mehl",
-          "Salz",
-          "Gemüsebouillon"
-        ],
-        "sizes": {
-          "4 Personen": {
-            "kleine Zwiebeln": "300 g",
-            "Karotten": "300 g",
-            "Schweinsragout": "460 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Erdnussöl": "3 EL",
-            "Mehl": "1 EL",
-            "Madras-Curry": "1 EL",
-            "Gemüsebouillon": "3 dl",
-            "Ananas": "350 g",
-            "Salbei": "2 Zweige"
-          },
-          "8 Personen": {
-            "kleine Zwiebeln": "600 g",
-            "Karotten": "600 g",
-            "Schweinsragout": "920 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Erdnussöl": "6 EL",
-            "Mehl": "2 EL",
-            "Madras-Curry": "2 EL",
-            "Gemüsebouillon": "6 dl",
-            "Ananas": "700 g",
-            "Salbei": "4 Zweige"
-          }
-        }
-      }
-    },
-    "allergens": [
-      "Zwiebel",
-      "Gemüse",
-      "Fleisch",
-      "Weizen",
-      "Früchte"
-    ],
-    "nutrition_type": [
-      "Fleisch/Fisch"
-    ],
-    "tags": [
-      "Fleisch/Fisch",
-      "Einsteiger",
-      "Europa",
-      "Winter",
-      "Frühling",
-      "Herbst"
-    ]
-  },
-  {
-    "id": "22254",
-    "score": 5.2264857,
-    "general_info": {
-      "title": "Schweinsnierstück an Portweinsauce",
-      "teaser": "Honig, Orangen und Sternanis verleihen dem im Ofen gebratenen Braten vom Schweinsnierstück festliche Düfte. Serviert wird das Fleisch mit Portweinsauce.",
-      "nutrition": {
-        "calories": 490,
-        "carbohydrates": 25,
-        "carbohydrates_percent": 22.4,
-        "fat": 15,
-        "fat_percent": 30.2,
-        "kilojoule": 2050,
-        "proteins": 53,
-        "proteins_percent": 47.4
-      },
-      "image_url": "https://recipeimages.migros.ch/medium/5c1c77fa5bf41320f39771172da57b7c7ea19528/schweinsnierstueck-an-portweinsauce-0-4-3.jpg"
-    },
-    "cooking_instructions": {
-      "time": 100,
-      "instructions": "Backofen auf 220 °C vorheizen. Salz, Paprika, Pfeffer, Senf, Honig und Öl zu einer Marinade rühren. Fleisch damit rundum bestreichen. In eine ofenfeste Form legen. Braten in der Ofenmitte 20 Minuten anbraten. Orange mit Nelken bestecken und in dicke Scheiben schneiden. Karotten längs in Stäbchen schneiden. Schalotten halbieren.",
-      "ingredients": {
-        "ingredients": [
-          "Karotte",
-          "Schalotte",
-          "Orange",
-          "weisser Portwein",
-          "Rapsöl",
-          "Schweinsnierstück",
-          "Pfeffer",
-          "Gewürznelke",
-          "edelsüsser Paprika",
-          "Salz",
-          "Sternanis",
-          "flüssiger Honig",
-          "Kalbsfond",
-          "milder Senf"
-        ],
-        "sizes": {
-          "4 Personen": {
-            "Salz": "1 TL",
-            "edelsüsser Paprika": "½ TL",
-            "Pfeffer": "½ TL",
-            "milder Senf": "1 TL",
-            "flüssiger Honig": "2 EL",
-            "Rapsöl": "1 EL",
-            "Schweinsnierstück à ca. 800 g": "1",
-            "Orange": "1",
-            "Gewürznelken": "8",
-            "Karotten": "400 g",
-            "Schalotten": "4",
-            "weisser Portwein": "1 dl",
-            "Kalbsfond": "3 dl",
-            "Sternanise": "2"
-          },
-          "8 Personen": {
-            "Salz": "2 TL",
-            "edelsüsser Paprika": "1 TL",
-            "Pfeffer": "1 TL",
-            "milder Senf": "2 TL",
-            "flüssiger Honig": "4 EL",
-            "Rapsöl": "2 EL",
-            "Schweinsnierstücke à ca. 800 g": "2",
-            "Orangen": "2",
-            "Gewürznelken": "16",
-            "Karotten": "800 g",
-            "Schalotten": "8",
-            "weisser Portwein": "2 dl",
-            "Kalbsfond": "6 dl",
-            "Sternanise": "4"
-          }
-        }
-      }
-    },
-    "allergens": [
-      "Fleisch",
-      "Früchte",
-      "Gemüse",
-      "Zwiebel",
-      "Alkohol",
-      "Eier",
-      "Milchprodukte"
-    ],
-    "nutrition_type": [
-      "Fleisch/Fisch"
-    ],
-    "tags": [
-      "Fleisch/Fisch",
-      "Geübt",
-      "Schweiz"
-    ]
-  },
-  {
-    "id": "22776",
-    "score": 5.2264857,
-    "general_info": {
-      "title": "Saftplätzli",
-      "teaser": "Saftplätzli vom Rind werden in einem Schmortopf zwischen Gemüse – Karotten, Stangensellerie, Zwiebeln – geschichtet und mit Rindsfond geschmort.",
-      "nutrition": {
-        "calories": 350,
-        "carbohydrates": 16,
-        "carbohydrates_percent": 19.3,
-        "fat": 7,
-        "fat_percent": 19,
-        "kilojoule": 1500,
-        "proteins": 51,
-        "proteins_percent": 61.6
-      },
-      "image_url": "https://recipeimages.migros.ch/medium/a1506e7ef30ed9623317695422400cefa59e5bbe/saftplaetzli-0-4-3.jpg"
-    },
-    "cooking_instructions": {
-      "time": 110,
-      "instructions": "Zwiebeln in Ringe, Karotten und Sellerie in dünne Scheiben schneiden. Plätzli mit Senf und Pfeffer würzen.",
-      "ingredients": {
-        "ingredients": [
-          "Karotte",
-          "Bratbutter",
-          "Rindssaftplätzli",
-          "Pfeffer",
-          "Zwiebel",
-          "Stangensellerie",
-          "Salz",
-          "Senf",
-          "Rindsfond"
-        ],
-        "sizes": {
-          "4 Personen": {
-            "Zwiebeln": "5",
-            "Karotten": "2",
-            "Stangensellerie": "200 g",
-            "Rindssaftplätzli": "800 g",
-            "Senf": "1 EL",
-            "Pfeffer": "",
-            "Bratbutter": "1 EL",
-            "Rindsfond": "4 dl",
-            "Salz": ""
-          },
-          "8 Personen": {
-            "Zwiebeln": "10",
-            "Karotten": "4",
-            "Stangensellerie": "400 g",
-            "Rindssaftplätzli": "1,6 kg",
-            "Senf": "2 EL",
-            "Pfeffer": "",
-            "Bratbutter": "2 EL",
-            "Rindsfond": "8 dl",
-            "Salz": ""
-          },
-          "12 Personen": {
-            "Zwiebeln": "15",
-            "Karotten": "6",
-            "Stangensellerie": "600 g",
-            "Rindssaftplätzli": "2,4 kg",
-            "Senf": "3 EL",
-            "Pfeffer": "",
-            "Bratbutter": "3 EL",
-            "Rindsfond": "1,2 l",
-            "Salz": ""
-          }
-        }
-      }
-    },
-    "allergens": [
-      "Zwiebel",
-      "Gemüse",
-      "Fleisch",
       "Milchprodukte",
       "Eier"
     ],
     "nutrition_type": [
-      "Fleisch/Fisch"
+      "Vegetarisch"
     ],
     "tags": [
-      "Fleisch/Fisch",
+      "Vegetarisch",
       "Geübt",
-      "Schweiz",
+      "Europa",
+      "Winter",
+      "Frühling",
       "Herbst"
     ]
   },
   {
-    "id": "22778",
-    "score": 5.2264857,
+    "id": "22060",
+    "score": 6.572678,
     "general_info": {
-      "title": "Kichererbseneintopf mit Gemüse",
-      "teaser": "Mit Gemüse wie Karotten, Zucchetti, Auberginen und Tomaten, gewürzt mit Peperoncini, Kurkuma und Korianderpulver, werden Kichererbsen zu einem Vegi-Eintopf.",
+      "title": "Fisch mit Banane",
+      "teaser": "Fisch wie Dorschfilets oder Seehechtfilets werden mit Bananen, Orangen, Zwiebeln, Peperoncini und Chilischoten in Alufolie auf dem Grill gegart.",
       "nutrition": {
-        "calories": 340,
-        "carbohydrates": 45,
-        "carbohydrates_percent": 56.2,
-        "fat": 8,
-        "fat_percent": 22.5,
-        "kilojoule": 1500,
-        "proteins": 17,
-        "proteins_percent": 21.2
+        "calories": 200,
+        "carbohydrates": 14,
+        "carbohydrates_percent": 30.3,
+        "fat": 1,
+        "fat_percent": 4.9,
+        "kilojoule": 850,
+        "proteins": 30,
+        "proteins_percent": 64.9
       },
-      "image_url": "https://recipeimages.migros.ch/medium/41136bbc7fb3c359cb13eb1174f67e62d7d927bb/kichererbseneintopf-mit-gemuese-0-4-3.jpg"
+      "image_url": "https://recipeimages.migros.ch/medium/85ccb8f66936072ff3dd13309f390608e51628ad/fisch-mit-banane-0-4-3.jpg"
     },
     "cooking_instructions": {
-      "time": 770,
-      "instructions": "Am Vortag: Kichererbsen in reichlich kaltem Wasser einweichen.",
+      "time": 30,
+      "instructions": "Orangenschale fein abreiben. Orangen auspressen. Zwiebel in feine Schnitze schneiden. Knoblauch in dünne Scheiben schneiden. Peperoncino und Chilis halbieren, entkernen und in dünne Streifen schneiden. Banane in Scheiben schneiden.",
       "ingredients": {
         "ingredients": [
-          "Karotte",
-          "Aubergine",
-          "Olivenöl",
-          "Kurkuma",
+          "Banane",
+          "Knoblauchzehe",
+          "Orange",
+          "Dorschfilet",
           "Peperoncino",
-          "gemahlener Koriander",
-          "Zucchetti",
-          "Tomate",
-          "Tomatenpüree",
-          "getrocknete Kichererbsen",
-          "Salz",
-          "Gemüsebouillon"
+          "grüne Chilischote",
+          "Zwiebel",
+          "Salz"
         ],
         "sizes": {
           "4 Personen": {
-            "getrocknete Kichererbsen": "250 g",
-            "Karotten": "300 g",
-            "Zucchetti": "300 g",
-            "Auberginen": "250 g",
+            "Orangen": "2",
+            "Zwiebel": "1",
+            "Knoblauchzehen": "2",
             "Peperoncino": "1",
-            "Olivenöl": "2 EL",
-            "Tomatenpüree": "6 EL",
-            "Kurkuma": "1 EL",
-            "gemahlener Koriander": "1 Prise",
-            "Gemüsebouillon": "4 dl",
-            "Tomaten": "4",
+            "grüne Chilischoten": "2",
+            "Banane": "1",
+            "Dorschfilets oder Seehechtfilets à 160 g": "4",
             "Salz": ""
           },
           "8 Personen": {
-            "getrocknete Kichererbsen": "500 g",
-            "Karotten": "600 g",
-            "Zucchetti": "600 g",
-            "Auberginen": "500 g",
+            "Orangen": "4",
+            "Zwiebeln": "2",
+            "Knoblauchzehen": "4",
             "Peperoncini": "2",
-            "Olivenöl": "4 EL",
-            "Tomatenpüree": "240 g",
-            "Kurkuma": "2 EL",
-            "gemahlener Koriander": "2 Prisen",
-            "Gemüsebouillon": "8 dl",
-            "Tomaten": "8",
+            "grüne Chilischoten": "4",
+            "Bananen": "2",
+            "Dorschfilets oder Seehechtfilets à 160 g": "8",
             "Salz": ""
           },
           "12 Personen": {
-            "getrocknete Kichererbsen": "750 g",
-            "Karotten": "900 g",
-            "Zucchetti": "900 g",
-            "Auberginen": "750 g",
+            "Orangen": "6",
+            "Zwiebeln": "3",
+            "Knoblauchzehen": "6",
             "Peperoncini": "3",
-            "Olivenöl": "6 EL",
-            "Tomatenpüree": "360 g",
-            "Kurkuma": "3 EL",
-            "gemahlener Koriander": "3 Prisen",
-            "Gemüsebouillon": "1,2 l",
-            "Tomaten": "12",
+            "grüne Chilischoten": "6",
+            "Bananen": "3",
+            "Dorschfilets oder Seehechtfilets à 160 g": "12",
             "Salz": ""
           }
         }
       }
     },
     "allergens": [
-      "Gemüse",
+      "Früchte",
       "Zwiebel",
-      "Weizen"
+      "Knoblauch",
+      "Fisch"
+    ],
+    "nutrition_type": [
+      "Fleisch/Fisch"
+    ],
+    "tags": [
+      "Fleisch/Fisch",
+      "Einsteiger",
+      "Südafrika",
+      "Sommer",
+      "Frühling"
+    ]
+  },
+  {
+    "id": "22223",
+    "score": 6.572678,
+    "general_info": {
+      "title": "Bananen-Pancakes mit Kaffeesauce",
+      "teaser": "Pancakes – Pfannkuchen aus einem Eierteig – werden mit gebratenen Bananen und Kaffeesauce als Dessert oder zum Brunch gerne genossen.",
+      "nutrition": {
+        "calories": 460,
+        "carbohydrates": 49,
+        "carbohydrates_percent": 43.8,
+        "fat": 24,
+        "fat_percent": 48.2,
+        "kilojoule": 1900,
+        "proteins": 9,
+        "proteins_percent": 8
+      },
+      "image_url": "https://recipeimages.migros.ch/medium/949f0c2fc53e0ef283c5b1bf0ab31166b3e682b2/bananen-pancakes-mit-kaffeesauce-0-4-3.jpg"
+    },
+    "cooking_instructions": {
+      "time": 70,
+      "instructions": "Butter schmelzen. Eier verquirlen. Beides mit der Milch mischen. Mehl, Backpulver und Zucker mischen. Eiermilch dazugeben und rasch zu einem glatten, dickflüssigen Teig verrühren. Ca. 30 Minuten ruhen lassen.",
+      "ingredients": {
+        "ingredients": [
+          "Kaffee",
+          "Banane",
+          "Butter",
+          "Milch",
+          "Rahm",
+          "Backpulver",
+          "Ei",
+          "Mehl",
+          "Zimt",
+          "Zucker"
+        ],
+        "sizes": {
+          "2 Personen": {
+            "Butter": "15 g",
+            "Ei": "1",
+            "Milch": "1 dl",
+            "Mehl": "50 g",
+            "Backpulver": "1 TL",
+            "Zucker": "20 g",
+            "Banane": "1",
+            "Butter zum Braten": "1 EL"
+          },
+          "4 Personen": {
+            "Butter": "30 g",
+            "Eier": "2",
+            "Milch": "2 dl",
+            "Mehl": "100 g",
+            "Backpulver": "2 TL",
+            "Zucker": "40 g",
+            "Bananen": "2",
+            "Butter zum Braten": "2 EL"
+          },
+          "6 Personen": {
+            "Butter": "45 g",
+            "Eier": "3",
+            "Milch": "3 dl",
+            "Mehl": "150 g",
+            "Backpulver": "3 TL",
+            "Zucker": "60 g",
+            "Bananen": "3",
+            "Butter zum Braten": "3 EL"
+          },
+          "8 Personen": {
+            "Butter": "60 g",
+            "Eier": "4",
+            "Milch": "4 dl",
+            "Mehl": "200 g",
+            "Backpulver": "4 TL",
+            "Zucker": "80 g",
+            "Bananen": "4",
+            "Butter zum Braten": "4 EL"
+          },
+          "10 Personen": {
+            "Butter": "75 g",
+            "Eier": "5",
+            "Milch": "5 dl",
+            "Mehl": "250 g",
+            "Backpulver": "5 TL",
+            "Zucker": "100 g",
+            "Bananen": "5",
+            "Butter zum Braten": "5 EL"
+          },
+          "12 Personen": {
+            "Butter": "90 g",
+            "Eier": "6",
+            "Milch": "6 dl",
+            "Mehl": "300 g",
+            "Backpulver": "6 TL",
+            "Zucker": "120 g",
+            "Bananen": "6",
+            "Butter zum Braten": "6 EL"
+          }
+        }
+      }
+    },
+    "allergens": [
+      "Milchprodukte",
+      "Eier",
+      "Weizen",
+      "Früchte"
     ],
     "nutrition_type": [
       "Vegetarisch"
@@ -678,94 +272,516 @@
     "tags": [
       "Vegetarisch",
       "Geübt",
-      "Europa",
+      "Nordamerika",
+      "Herbst",
+      "Winter",
       "Sommer",
-      "Herbst"
+      "Sommer"
     ]
   },
   {
-    "id": "22282",
-    "score": 5.2264857,
+    "id": "4799751",
+    "score": 6.572678,
     "general_info": {
-      "title": "Gemüse mit Kressequark",
-      "teaser": "Im Körbchen gedämpft sind Gemüse – Karotten, Kartoffeln, Blumenkohl, Broccoli –, serviert mit Kressequark, eine leichte kleine Mahlzeit.",
+      "title": "Beeren-Nicecream",
+      "teaser": "Wunderbar cremig und trotzdem ohne schlechtes Gewissen zu geniessen: Nicecream mit Beeren ist ein gesunder Glace-Schmaus für die ganze Familie.",
       "nutrition": {
-        "calories": 210,
-        "carbohydrates": 24,
-        "carbohydrates_percent": 54.5,
-        "fat": 4,
-        "fat_percent": 20.5,
-        "kilojoule": 850,
-        "proteins": 11,
-        "proteins_percent": 25
+        "calories": 190,
+        "carbohydrates": 39,
+        "carbohydrates_percent": 90.2,
+        "fat": 1,
+        "fat_percent": 5.2,
+        "kilojoule": 800,
+        "proteins": 2,
+        "proteins_percent": 4.6
       },
-      "image_url": "https://recipeimages.migros.ch/medium/c2f77cf1989586038d9f7154d007ec163d0bb2ab/gemuese-mit-kressequark-0-4-3.jpg"
+      "image_url": "https://recipeimages.migros.ch/medium/9f1afb874a9d6975d7354377e1c1bc371de379ab/beeren-nicecream-0-4-3.jpg"
     },
     "cooking_instructions": {
-      "time": 35,
-      "instructions": "Broccoli und Blumenkohl in Röschen teilen. Karotten in ca. 5 cm lange Stücke schneiden und diese längs halbieren. Kartoffeln waschen und samt Schale vierteln.",
+      "time": 730,
+      "instructions": "Am Vortag die Bananen schälen, in Stücke schneiden und möglichst lose über Nacht in einem geschlossenen Gefäss tiefkühlen.",
       "ingredients": {
         "ingredients": [
-          "Karotte",
-          "Kresse",
-          "Blumenkohl",
-          "Broccoli",
-          "Butter",
-          "Magerquark",
-          "Pfeffer",
-          "festkochende Kartoffel",
-          "Salz"
+          "tiefgekühlte Heidelbeere",
+          "Banane",
+          "Mandeldrink"
         ],
         "sizes": {
           "2 Personen": {
-            "Broccoli": "100 g",
-            "Blumenkohl": "100 g",
-            "Karotten": "100 g",
-            "mittelgrosse festkochende Kartoffeln": "200 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Butter": "1 EL",
-            "Magerquark": "125 g",
-            "Kresse à ca. 15 g": "½ Schale"
+            "reife Bananen": "2",
+            "tiefgekühlte Beeren, z.B. Heidelbeeren": "125 g",
+            "Mandeldrink oder Cashewdrink": "5 cl"
           },
           "4 Personen": {
-            "Broccoli": "200 g",
-            "Blumenkohl": "200 g",
-            "Karotten": "200 g",
-            "mittelgrosse festkochende Kartoffeln": "400 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Butter": "2 EL",
-            "Magerquark": "250 g",
-            "Kresse à ca. 15 g": "1 Schale"
+            "reife Bananen": "4",
+            "tiefgekühlte Beeren, z.B. Heidelbeeren": "250 g",
+            "Mandeldrink oder Cashewdrink": "1 dl"
           },
           "6 Personen": {
-            "Broccoli": "300 g",
-            "Blumenkohl": "300 g",
-            "Karotten": "300 g",
-            "mittelgrosse festkochende Kartoffeln": "600 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Butter": "3 EL",
-            "Magerquark": "375 g",
-            "Kresse à ca. 15 g": "1½ Schalen"
+            "reife Bananen": "6",
+            "tiefgekühlte Beeren, z.B. Heidelbeeren": "375 g",
+            "Mandeldrink oder Cashewdrink": "1,5 dl"
           },
           "8 Personen": {
-            "Broccoli": "400 g",
-            "Blumenkohl": "400 g",
-            "Karotten": "400 g",
-            "mittelgrosse festkochende Kartoffeln": "800 g",
-            "Salz": "",
-            "Pfeffer": "",
-            "Butter": "4 EL",
-            "Magerquark": "500 g",
-            "Kresse à ca. 15 g": "2 Schalen"
+            "reife Bananen": "8",
+            "tiefgekühlte Beeren, z.B. Heidelbeeren": "500 g",
+            "Mandeldrink oder Cashewdrink": "2 dl"
+          },
+          "10 Personen": {
+            "reife Bananen": "10",
+            "tiefgekühlte Beeren, z.B. Heidelbeeren": "625 g",
+            "Mandeldrink oder Cashewdrink": "2,5 dl"
+          },
+          "12 Personen": {
+            "reife Bananen": "12",
+            "tiefgekühlte Beeren, z.B. Heidelbeeren": "750 g",
+            "Mandeldrink oder Cashewdrink": "3 dl"
           }
         }
       }
     },
     "allergens": [
-      "Gemüse",
+      "Früchte",
+      "Nüsse und Kerne"
+    ],
+    "nutrition_type": [
+      "Vegan"
+    ],
+    "tags": [
+      "Vegan",
+      "Einsteiger",
+      "Europa",
+      "Frühling",
+      "Herbst",
+      "Sommer",
+      "Winter"
+    ]
+  },
+  {
+    "id": "4982686",
+    "score": 6.572678,
+    "general_info": {
+      "title": "Schoko-Tartelettes mit Kokosglace ",
+      "teaser": "Ein Boden aus Schokoladenguetzli und Butter, darauf Bananen, Kokosglace und frische Beeren – dieses Dessert schmeckt garantiert Gross und Klein.",
+      "nutrition": {
+        "calories": 450,
+        "carbohydrates": 41,
+        "carbohydrates_percent": 36.8,
+        "fat": 30,
+        "fat_percent": 60.5,
+        "kilojoule": 1900,
+        "proteins": 3,
+        "proteins_percent": 2.7
+      },
+      "image_url": "https://recipeimages.migros.ch/medium/627bf62c7746593e597c344c9e42a5bee14dc6d1/schoko-tartelettes-mit-kokosglace-0-4-3.jpg"
+    },
+    "cooking_instructions": {
+      "time": 90,
+      "instructions": "Butter schmelzen. Guetzli in einen Gefrierbeutel geben und mit einem Wallholz fein zerbröseln. Mit flüssiger Butter und Wasser sehr gut mischen. 10 Minuten ruhen lassen. Brösel in die Förmchen verteilen und gut andrücken. 1 Stunde kühl stellen.",
+      "ingredients": {
+        "ingredients": [
+          "gemischte Beeren",
+          "Wasser",
+          "Zitronensaft",
+          "Banane",
+          "Pfefferminze",
+          "Butter",
+          "Coco Ice-Land Pure Coco (Glace)",
+          "Choco-Dinkel-Sablé"
+        ],
+        "sizes": {
+          "6 Stück": {
+            "Butter": "90 g",
+            "Guetzli, z. B. Chocosablés": "220 g",
+            "Wasser": "1 EL",
+            "Bananen": "1½",
+            "Zitronensaft": "2 EL",
+            "Glace, z. B. Coco Ice-Land Pure Coco (Glace)": "300 g",
+            "gemischte Beeren": "100 g",
+            "Pfefferminze": "1 Zweig"
+          },
+          "12 Stück": {
+            "Butter": "180 g",
+            "Guetzli, z. B. Chocosablés": "440 g",
+            "Wasser": "2 EL",
+            "Bananen": "3",
+            "Zitronensaft": "4 EL",
+            "Glace, z. B. Coco Ice-Land Pure Coco (Glace)": "600 g",
+            "gemischte Beeren": "200 g",
+            "Pfefferminze": "2 Zweige"
+          }
+        }
+      }
+    },
+    "allergens": [
+      "Milchprodukte",
+      "Eier",
+      "Früchte",
+      "Nüsse und Kerne"
+    ],
+    "nutrition_type": [
+      "Vegetarisch"
+    ],
+    "tags": [
+      "Vegetarisch",
+      "Einsteiger",
+      "Europa",
+      "Sommer"
+    ]
+  },
+  {
+    "id": "4931723",
+    "score": 6.572678,
+    "general_info": {
+      "title": "Smoothie-Bowl",
+      "teaser": "Smoothie-Bowls – ob zum Frühstück, zum Brunch oder einfach so – sind fein und gesund. Diese Version mit Banane, Mango und Erdbeeren gelingt ganz einfach.",
+      "nutrition": {
+        "calories": 570,
+        "carbohydrates": 96,
+        "carbohydrates_percent": 74.1,
+        "fat": 10,
+        "fat_percent": 17.4,
+        "kilojoule": 2400,
+        "proteins": 11,
+        "proteins_percent": 8.5
+      },
+      "image_url": "https://recipeimages.migros.ch/medium/16ed14bc08a895f0291fb9f0c186bb6a569a177f/smoothie-bowl-0-4-3.jpg"
+    },
+    "cooking_instructions": {
+      "time": 1460,
+      "instructions": "Am Vortag Banane schälen, in Stücke schneiden und möglichst lose über Nacht in einem geschlossenen Gefäss tiefkühlen.",
+      "ingredients": {
+        "ingredients": [
+          "Heidelbeere",
+          "Erdbeere",
+          "Banane",
+          "essbare Blüte",
+          "glutenfreie aha!-Haferflocken",
+          "Kokos-Chips",
+          "Mandeldrink",
+          "Mango",
+          "Pitahaya"
+        ],
+        "sizes": {
+          "1 Person": {
+            "reife Banane": "1",
+            "reife Mango": "½",
+            "Erdbeeren": "2",
+            "glutenfreie aha!-Haferflocken": "2 EL",
+            "Mandeldrink": "1 dl"
+          },
+          "2 Personen": {
+            "reife Bananen": "2",
+            "reife Mango": "1",
+            "Erdbeeren": "4",
+            "glutenfreie aha!-Haferflocken": "4 EL",
+            "Mandeldrink": "2 dl"
+          },
+          "4 Personen": {
+            "reife Bananen": "4",
+            "reife Mangos": "2",
+            "Erdbeeren": "8",
+            "glutenfreie aha!-Haferflocken": "8 EL",
+            "Mandeldrink": "4 dl"
+          },
+          "6 Personen": {
+            "reife Bananen": "6",
+            "reife Mangos": "3",
+            "Erdbeeren": "12",
+            "glutenfreie aha!-Haferflocken": "12 EL",
+            "Mandeldrink": "6 dl"
+          },
+          "8 Personen": {
+            "reife Bananen": "8",
+            "reife Mangos": "4",
+            "Erdbeeren": "16",
+            "glutenfreie aha!-Haferflocken": "16 EL",
+            "Mandeldrink": "8 dl"
+          },
+          "10 Personen": {
+            "reife Bananen": "10",
+            "reife Mangos": "5",
+            "Erdbeeren": "20",
+            "glutenfreie aha!-Haferflocken": "20 EL",
+            "Mandeldrink": "10 dl"
+          },
+          "12 Personen": {
+            "reife Bananen": "12",
+            "reife Mangos": "6",
+            "Erdbeeren": "24",
+            "glutenfreie aha!-Haferflocken": "24 EL",
+            "Mandeldrink": "12 dl"
+          }
+        }
+      }
+    },
+    "allergens": [
+      "Früchte",
+      "Nüsse und Kerne"
+    ],
+    "nutrition_type": [
+      "Vegan"
+    ],
+    "tags": [
+      "Vegan",
+      "Einsteiger",
+      "Europa",
+      "Frühling",
+      "Herbst",
+      "Sommer"
+    ]
+  },
+  {
+    "id": "431920",
+    "score": 6.572678,
+    "general_info": {
+      "title": "Power-Bliss-Smoothie",
+      "teaser": "Grüne Smoothies sind gesund und als Zwischenmahlzeit im Nu zubereitet. Beliebt sind Mixgetränke mit Federkohl, in denen Bananen Süsse ins Spiel bringen.",
+      "nutrition": {
+        "calories": 100,
+        "carbohydrates": 19,
+        "carbohydrates_percent": 78.4,
+        "fat": 1,
+        "fat_percent": 9.3,
+        "kilojoule": 450,
+        "proteins": 3,
+        "proteins_percent": 12.4
+      },
+      "image_url": "https://recipeimages.migros.ch/medium/0477e36be0c684d6fb7ef875cb870e492aa61bd5/power-bliss-smoothie-0-4-3.jpg"
+    },
+    "cooking_instructions": {
+      "time": 5,
+      "instructions": "Banane schälen, Fruchtfleisch in Stücke schneiden. Apfel vierteln, Kerngehäuse entfernen, Fruchtfleisch in Stücke schneiden. Federkohl grob schneiden. Zitrone auspressen. Zitronensaft mit Banane, Apfel, Kohl und Wasser in einem hohen Standmixer fein pürieren.",
+      "ingredients": {
+        "ingredients": [
+          "Zitrone",
+          "Wasser",
+          "Apfel",
+          "Banane",
+          "Federkohl"
+        ],
+        "sizes": {
+          "2 Gläser": {
+            "Banane": "1",
+            "Apfel": "1",
+            "Federkohl oder Chinakohl": "100 g",
+            "Zitrone": "½",
+            "Wasser": "2,5 dl"
+          },
+          "4 Gläser": {
+            "Bananen": "2",
+            "Äpfel": "2",
+            "Federkohl oder Chinakohl": "200 g",
+            "Zitrone": "1",
+            "Wasser": "5 dl"
+          }
+        }
+      }
+    },
+    "allergens": [
+      "Früchte",
+      "Gemüse"
+    ],
+    "nutrition_type": [
+      "Vegan"
+    ],
+    "tags": [
+      "Vegan",
+      "Einsteiger",
+      "Europa",
+      "Winter"
+    ]
+  },
+  {
+    "id": "2415166",
+    "score": 6.572678,
+    "general_info": {
+      "title": "Kaki-Bitter",
+      "teaser": "Bittersüsse Vitaminbombe für kalte Wintertage: ein raffinierter Shake mit Kakis, Grapefruit, Datteln und Banane - geht runter wie Öl und macht putzmunter.",
+      "nutrition": {
+        "calories": 120,
+        "carbohydrates": 25,
+        "carbohydrates_percent": 92.6,
+        "fat": 0,
+        "fat_percent": 0,
+        "kilojoule": 500,
+        "proteins": 2,
+        "proteins_percent": 7.4
+      },
+      "image_url": "https://recipeimages.migros.ch/medium/8104eeccb6841253963f3a7c263eb128fd0aa644/kaki-bitter-0-4-3.jpg"
+    },
+    "cooking_instructions": {
+      "time": 5,
+      "instructions": "Grapefruit samt weisser Haut schälen. Mit den Kakis in Stücke schneiden. Datteln längshalbieren, Kerne entfernen. Alles mit der Banane in einen hohen Standmixer geben und feinpürieren.",
+      "ingredients": {
+        "ingredients": [
+          "Grapefruit",
+          "Wasser",
+          "Banane",
+          "Dattel",
+          "Persimon"
+        ],
+        "sizes": {
+          "4 Gläser": {
+            "Grapefruit": "1",
+            "Persimon-Kakis": "2",
+            "Datteln": "2",
+            "reife Banane": "1",
+            "Wasser": "3 dl"
+          },
+          "8 Gläser": {
+            "Grapefruits": "2",
+            "Persimon-Kakis": "4",
+            "Datteln": "4",
+            "reife Bananen": "2",
+            "Wasser": "6 dl"
+          }
+        }
+      }
+    },
+    "allergens": [
+      "Früchte"
+    ],
+    "nutrition_type": [
+      "Vegan"
+    ],
+    "tags": [
+      "Vegan",
+      "Einsteiger",
+      "Europa",
+      "Winter",
+      "Herbst"
+    ]
+  },
+  {
+    "id": "419277",
+    "score": 6.572678,
+    "general_info": {
+      "title": "Grüner Ananas-Smoothie",
+      "teaser": "Ein Geschmackserlebnis für den Gaumen: Smoothie mit frischer Ananas, Banane, grünem Eichblattsalat und Salatspinat.",
+      "nutrition": {
+        "calories": 110,
+        "carbohydrates": 22,
+        "carbohydrates_percent": 91.7,
+        "fat": 0,
+        "fat_percent": 0,
+        "kilojoule": 450,
+        "proteins": 2,
+        "proteins_percent": 8.3
+      },
+      "image_url": "https://recipeimages.migros.ch/medium/d826b3b368e9462b3ddf496cf53bc9f1a1dd84e4/gruener-ananas-smoothie-0-4-3.jpg"
+    },
+    "cooking_instructions": {
+      "time": 5,
+      "instructions": "Ananas und Banane in Stücke schneiden. Mit Spinat, Salat und Wasser in einem hohen Standmixer fein pürieren.",
+      "ingredients": {
+        "ingredients": [
+          "Ananas",
+          "Wasser",
+          "Banane",
+          "Eichblattsalat",
+          "Salatspinat"
+        ],
+        "sizes": {
+          "2 Gläser": {
+            "Ananas (ca. 1/4 Ananas)": "200 g",
+            "Banane à ca. 100 g": "1",
+            "Salatspinat (ca. 1 Handvoll)": "50 g",
+            "grüner Eichblattsalat (ca. 3 Blätter)": "25 g",
+            "Wasser, kalt": "2 dl"
+          }
+        }
+      }
+    },
+    "allergens": [
+      "Früchte",
+      "Gemüse"
+    ],
+    "nutrition_type": [
+      "Vegan"
+    ],
+    "tags": [
+      "Vegan",
+      "Einsteiger",
+      "Europa",
+      "Frühling",
+      "Sommer",
+      "Herbst"
+    ]
+  },
+  {
+    "id": "88458",
+    "score": 6.572678,
+    "general_info": {
+      "title": "Powermüesli",
+      "teaser": "Energie für den ganzen Tag. Früchte mit Mandeln, Sauermilch, Honig und Kokoschips in einem Schüsselchen mischen, mit einem Stück währschaftem Brot geniessen.",
+      "nutrition": {
+        "calories": 470,
+        "carbohydrates": 40,
+        "carbohydrates_percent": 35.4,
+        "fat": 28,
+        "fat_percent": 55.8,
+        "kilojoule": 1950,
+        "proteins": 10,
+        "proteins_percent": 8.8
+      },
+      "image_url": "https://recipeimages.migros.ch/medium/4d14df4a9818285555ae36cf66af0a78b2386b1c/powermueesli-0-4-3.jpg"
+    },
+    "cooking_instructions": {
+      "time": 15,
+      "instructions": "Limette auspressen. Saft mit der Banane fein pürieren. Äpfel und Papaya schälen, entkernen und in kleine Würfelchen schneiden. Alles zusammen mit den Mandeln zur Sauermilch geben und mischen. Mit Honig süssen. Müesli anrichten. Granatäpfel quer halbieren und darüber ausdrücken, Kerne mit dem Löffelrücken aus der Schale klopfen. Alles mit Kokoschips bestreuen. Dazu passt Drescherbrot.",
+      "ingredients": {
+        "ingredients": [
+          "Granatapfel",
+          "Apfel",
+          "Banane",
+          "gemahlene geschälte Mandeln",
+          "M-Dessert (Sauermilch)",
+          "Limette",
+          "Papaya",
+          "Honig",
+          "Kokosraspel"
+        ],
+        "sizes": {
+          "4 Personen": {
+            "Limette": "½",
+            "reife Banane": "1",
+            "Äpfel": "2",
+            "reife Papaya à ca. 400 g": "1",
+            "gemahlene geschälte Mandeln": "6 EL",
+            "M-Dessert (Sauermilch)": "500 g",
+            "Honig": "1 EL",
+            "Granatäpfel": "2",
+            "Kokoschips oder Kokosraspel": "4 EL"
+          },
+          "8 Personen": {
+            "Limette": "1",
+            "reife Bananen": "2",
+            "Äpfel": "4",
+            "reife Papayas à ca. 400 g": "2",
+            "gemahlene geschälte Mandeln": "90 g",
+            "M-Dessert (Sauermilch)": "1 kg",
+            "Honig": "2 EL",
+            "Granatäpfel": "4",
+            "Kokoschips oder Kokosraspel": "80 g"
+          },
+          "12 Personen": {
+            "Limetten": "1½",
+            "reife Bananen": "3",
+            "Äpfel": "6",
+            "reife Papayas à ca. 400 g": "3",
+            "gemahlene geschälte Mandeln": "140 g",
+            "M-Dessert (Sauermilch)": "1,5 kg",
+            "Honig": "3 EL",
+            "Granatäpfel": "6",
+            "Kokoschips oder Kokosraspel": "120 g"
+          }
+        }
+      }
+    },
+    "allergens": [
+      "Früchte",
+      "Nüsse und Kerne",
       "Milchprodukte"
     ],
     "nutrition_type": [
@@ -775,203 +791,8 @@
       "Vegetarisch",
       "Einsteiger",
       "Schweiz",
-      "Sommer",
       "Frühling",
-      "Herbst"
-    ]
-  },
-  {
-    "id": "22283",
-    "score": 5.2264857,
-    "general_info": {
-      "title": "Couscous mit Gemüse",
-      "teaser": "Ein leichtes, vegetarisches Gericht: Karotten und Stangensellerie werden in einem orientalisch gewürzten Sud gekocht, darüber wird Couscous gedämpft.",
-      "nutrition": {
-        "calories": 350,
-        "carbohydrates": 65,
-        "carbohydrates_percent": 79.8,
-        "fat": 2,
-        "fat_percent": 5.5,
-        "kilojoule": 1450,
-        "proteins": 12,
-        "proteins_percent": 14.7
-      },
-      "image_url": "https://recipeimages.migros.ch/medium/0beb9f80b45dfe57502561d18f36bb25208380a2/couscous-mit-gemuese-0-4-3.jpg"
-    },
-    "cooking_instructions": {
-      "time": 40,
-      "instructions": "Karotten und Sellerie in 5 cm lange Stücke schneiden und diese längs halbieren. Bouillon, Tomaten, Zimtstange und Orientgewürz mischen. Knoblauch dazupressen. Sud aufkochen. Mit Salz und Pfeffer abschmecken. Gemüse zum Sud geben. Ca. 20 Minuten weich kochen.",
-      "ingredients": {
-        "ingredients": [
-          "gehackte geschälte Tomaten",
-          "Karotte",
-          "Knoblauchzehe",
-          "glattblättrige Petersilie",
-          "orientalische Gewürzmischung",
-          "Pfeffer",
-          "Couscous",
-          "Spinat",
-          "Stangensellerie",
-          "Salz",
-          "Zimtstange",
-          "Gemüsebouillon"
-        ],
-        "sizes": {
-          "2 Personen": {
-            "Karotten": "150 g",
-            "Stangensellerie": "150 g",
-            "Gemüsebouillon": "3,5 dl",
-            "gehackte geschälte Tomaten aus der Dose": "200 g",
-            "Zimtstange": "0,5",
-            "orientalische Gewürzmischung": "½ EL",
-            "Knoblauchzehe": "1",
-            "Salz": "",
-            "Pfeffer": "",
-            "Spinat": "50 g",
-            "Couscous": "150 g",
-            "glattblättrige Petersilie": "½ Bund"
-          },
-          "4 Personen": {
-            "Karotten": "300 g",
-            "Stangensellerie": "300 g",
-            "Gemüsebouillon": "7 dl",
-            "gehackte geschälte Tomaten aus der Dose": "400 g",
-            "Zimtstange": "1",
-            "orientalische Gewürzmischung": "1 EL",
-            "Knoblauchzehen": "2",
-            "Salz": "",
-            "Pfeffer": "",
-            "Spinat": "100 g",
-            "Couscous": "300 g",
-            "glattblättrige Petersilie": "1 Bund"
-          },
-          "8 Personen": {
-            "Karotten": "600 g",
-            "Stangensellerie": "600 g",
-            "Gemüsebouillon": "1,4 l",
-            "gehackte geschälte Tomaten aus der Dose": "800 g",
-            "Zimtstangen": "2",
-            "orientalische Gewürzmischung": "2 EL",
-            "Knoblauchzehen": "4",
-            "Salz": "",
-            "Pfeffer": "",
-            "Spinat": "200 g",
-            "Couscous": "600 g",
-            "glattblättrige Petersilie": "2 Bund"
-          },
-          "12 Personen": {
-            "Karotten": "900 g",
-            "Stangensellerie": "900 g",
-            "Gemüsebouillon": "2,1 l",
-            "gehackte geschälte Tomaten aus der Dose": "1,2 kg",
-            "Zimtstangen": "3",
-            "orientalische Gewürzmischung": "3 EL",
-            "Knoblauchzehen": "6",
-            "Salz": "",
-            "Pfeffer": "",
-            "Spinat": "300 g",
-            "Couscous": "900 g",
-            "glattblättrige Petersilie": "3 Bund"
-          }
-        }
-      }
-    },
-    "allergens": [
-      "Gemüse",
-      "Zwiebel",
-      "Weizen",
-      "Knoblauch"
-    ],
-    "nutrition_type": [
-      "Vegetarisch"
-    ],
-    "tags": [
-      "Vegetarisch",
-      "Einsteiger",
-      "Nordafrika",
-      "Winter",
-      "Frühling",
-      "Herbst"
-    ]
-  },
-  {
-    "id": "22826",
-    "score": 5.2264857,
-    "general_info": {
-      "title": "Forelle im Gemüse-Weisswein-Sud",
-      "teaser": "Küchenfertige ganze Forellen werden in einem Sud mit Gemüse und Weisswein gegart. Zum Servieren werden sie mit aufgeschäumter Butter beträufelt.",
-      "nutrition": {
-        "calories": 480,
-        "carbohydrates": 4,
-        "carbohydrates_percent": 5.1,
-        "fat": 15,
-        "fat_percent": 43.4,
-        "kilojoule": 2000,
-        "proteins": 40,
-        "proteins_percent": 51.4
-      },
-      "image_url": "https://recipeimages.migros.ch/medium/2a35801db7095f0838dec58ac9c05d67f45f70b0/forelle-im-gemuese-weisswein-sud-0-4-3.jpg"
-    },
-    "cooking_instructions": {
-      "time": 25,
-      "instructions": "Alle Gemüse in feine Scheiben schneiden. Mit Wein und Salzwasser in einer weiten Pfanne 5 Minuten kochen lassen. Forellen mit kaltem Wasser abspülen. In den Gemüse-Wein-Sud legen. Zugedeckt bei kleiner Hitze 10 Minuten gar ziehen lassen. Garprobe machen: Mit einem spitzen Messerchen beim Rückgrat einstechen; wenn sich das Fleisch gut von den Gräten löst, ist der Fisch gar.",
-      "ingredients": {
-        "ingredients": [
-          "Zitrone",
-          "Wasser",
-          "Karotte",
-          "Lauch",
-          "Petersilie",
-          "Butter",
-          "Weisswein",
-          "Forelle",
-          "Sellerie",
-          "Salz"
-        ],
-        "sizes": {
-          "2 Personen": {
-            "Karotte": "½",
-            "Lauch": "25 g",
-            "Sellerie": "25 g",
-            "Weisswein": "0,75 dl",
-            "Salz": "",
-            "Wasser": "1,5 dl",
-            "küchenfertige Forellen": "2",
-            "Butter": "30 g",
-            "Zitrone": "½",
-            "Petersilie": "¼ Bund"
-          },
-          "4 Personen": {
-            "Karotte": "1",
-            "Lauch": "50 g",
-            "Sellerie": "50 g",
-            "Weisswein": "1,5 dl",
-            "Salz": "",
-            "Wasser": "3 dl",
-            "küchenfertige Forellen": "4",
-            "Butter": "60 g",
-            "Zitrone": "1",
-            "Petersilie": "½ Bund"
-          }
-        }
-      }
-    },
-    "allergens": [
-      "Gemüse",
-      "Alkohol",
-      "Fisch",
-      "Milchprodukte",
-      "Früchte"
-    ],
-    "nutrition_type": [
-      "Fleisch/Fisch"
-    ],
-    "tags": [
-      "Fleisch/Fisch",
-      "Geübt",
-      "Schweiz",
       "Herbst",
-      "Frühling",
       "Sommer",
       "Winter"
     ]
