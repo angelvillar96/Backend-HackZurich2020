@@ -188,9 +188,9 @@ def get_recipe():
     """
     data = request.form
     user = User.query.filter_by(username=data["username"]).first()
-
+    ingredient = None if (data["ingredient"]=="undefined") else data["ingredient"]
     if user:
-        recommendations = get_recipes_by_ingredient(data["ingredient"])
+        recommendations = get_recipes_by_ingredient(ingredient)
 
         filtered = recommendations#filter_sort_recipes(recommendations, user)
         return jsonify(
@@ -203,5 +203,33 @@ def get_recipe():
 
 @app.route('/api/profile/<username>', methods=['GET'])
 def profile(username):
+    """
+        Profile information of user
 
+        returns
+        {
+            username: <Username>,
+            name: <Name of user>,
+            age: <Age of user>,
+            calories: <Target calories of user>,
+            achievements: <Achievements of user>
+        }
+
+    """
     user = User.query.filter_by(username=username).first()
+    if user:
+        data = {
+            "username": username,
+            "name": user.name,
+            "age": user.age,
+            "calories": user.calories,
+            "achievements": user.achievements
+        }
+
+        return jsonify(
+            data=data
+        ), 200
+    else:
+        return jsonify(
+            message="No user found"
+        ), 404
