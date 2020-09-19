@@ -9,7 +9,11 @@ class User(db.Model):
     password_hash = db.Column(db.String(128))
     calories = db.Column(db.Integer)
     foods = db.relationship('Food', backref='consumer', lazy='dynamic')
-    #TODO add restrictions
+    vegan = db.Column(db.Boolean, default=False)
+    vegetarian = db.Column(db.Boolean, default=False)
+    lactose_intolerant = db.Column(db.Boolean, default=False)
+    low_carb = db.Column(db.Boolean, default=False)
+    achievements = db.Column(db.String(64)) #1 -> seven_days, 2 -> thirty_days, 3 -> healthy_style, 4 -> couch_potato, 5 -> vegie_style, 6 -> fitness_hero | ex: "1,3,5"
 
     def __reg__(self):
         return '<User {}>'.format(self.username)

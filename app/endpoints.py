@@ -3,6 +3,7 @@ from flask import jsonify, request
 from app.models import User, Food
 from app.processing.api_requests import get_food_name, get_recipes_by_ingredient
 from app.processing.utils import process_overview
+from app.processing.filter_recipes import filter_sort_recipes
 
 
 @app.route('/', methods=['GET'])
@@ -21,7 +22,12 @@ def create_user():
             username: <Username (unique)>,
             password: <Password>,
             calories: <Calories user wants to eat>,
-            restrictions: <Food restrictions user has>
+            restrictions: [
+                {type: lactose_intolerant, bool: <True or False>},
+                {type: low_carb, bool: <True or False>},
+                {type: vegan, bool: <True or False>},
+                {type: vegetarian, bool: <True or False>}
+            ]
         }
 
     """
@@ -36,6 +42,17 @@ def create_user():
     else:
         user = User(username=data["username"], name=data["name"], calories=data["calories"])
         user.set_password(data["password"])
+        rest = data["restrictions"]
+        for r in rest:
+            if r["type"] == "lactose_intolerant" and r["bool"] == "True":
+                user.lactose_intolerant = True
+            elif r["type"] == "vegan" and r["bool"] == "True":
+                user.vagan = True
+            elif r["type"] == "vegetarian" and r["bool"] == "True":
+                user.vegetarian = True
+            elif r["type"] == "low_carb" and r["bool"] == "True":
+                user.lactose_intolerant = True
+
         db.session.add(user)
         db.session.commit()
         return jsonify(
@@ -169,13 +186,13 @@ def get_recipe():
         }
 
     """
-    data = request.get_json()
+    data = request.form
     user = User.query.filter_by(username=data["username"]).first()
 
     if user:
         recommendations = get_recipes_by_ingredient(data["ingredient"])
 
-        filtered = recommendations#filter_sort_recipes(user, recommendations)
+        filtered = filter_sort_recipes(recommendations, user)
         return jsonify(
             recommendations=filtered
         ), 200

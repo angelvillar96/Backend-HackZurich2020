@@ -8,15 +8,11 @@ from datetime import datetime
 
 import numpy as np
 
-def filter_sort_recipes(recipes, username):
+def filter_sort_recipes(recipes, user):
     """
     Filtering/sorting the retrieved recipes based on the dietary
     restrictions of a user
     """
-
-    # obtaining the restiriction values for the current user
-    restrictions = _get_restictions(username=username)
-    user = User.query.filter_by(username=username).first()
 
     filtered_recipes = _filter_recipes(recipes=recipes, user=user)
     sorted_recipes = _sort_recipes(recipes=filtered_recipes, user= user)
@@ -33,24 +29,18 @@ def _filter_recipes(recipes, user):
     filtered_recipes = []
     for recipe in recipes:
         # excluding recipes that do not compeil with the dietary restrictions
-        if("Vegan" not in recipe["nutrition_type"] and user.restrictions.vegan is True):
+        if("Vegan" not in recipe["nutrition_type"] and user.vegan is True):
             continue
-        if("Vegetarish" not in recipe["nutrition_type"]and user.restrictions.vegetarian is True):
+        if("Vegetarish" not in recipe["nutrition_type"]and user.vegetarian is True):
             continue
-        if("Milchprodukte" not in recipe["allergens"] and user.restrictions.lactose_intolerant is True):
+        if("Milchprodukte" not in recipe["allergens"] and user.lactose_intolerant is True):
             continue
 
         # excluding recipes that do not compeil with the low-carb threshold
         carbs = recipe["general_info"]["nutrition"]["carbohydrates_percent"]
-        if(carbs > Config.LOW_CARB_THR and user.restrictions.low_carb is True):
+        if(carbs > Config.LOW_CARB_THR and user.low_carb is True):
             continue
 
-        # excluding recipes with allergens
-        allergens = user.restrictions.allergens
-        recipe_allergens = recipe["allergens"]
-        # if length of joined list with removing duplicate smaller than sum of lengths
-        if( len(list(set(recipe_allergens + allergens))) < len(allergens) + len(recipe_allergens)):
-            continue
         filtered_recipes.append(recipe)
 
     return filtered_recipes
@@ -63,7 +53,7 @@ def _sort_recipes(recipes, user):
 
     sorted_recipes = []
     date = datetime.today().strftime('%d.%m.%Y')
-    food_today = user.food.filter_by(date_consumed=date).all()
+    food_today = user.foods.filter_by(date_consumed=date).all()
     total_calories = sum([f.calories for f in food_today])
     calory_limit = user.calories
 
