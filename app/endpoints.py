@@ -221,7 +221,6 @@ def profile(username):
         data = {
             "username": username,
             "name": user.name,
-            "age": user.age,
             "calories": user.calories,
             "achievements": user.achievements
         }
