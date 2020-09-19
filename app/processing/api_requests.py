@@ -174,6 +174,8 @@ def get_recipes_by_ingredient(ingredient, n_items=5):
         ingredient_name = ingredient_name.text
     except Exception as e:
         ingredient_name = ingredient
+    print(ingredient)
+    print(ingredient_name)
 
     auth = Config.MIGROS_AUTH
     get_recipe_url = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search"

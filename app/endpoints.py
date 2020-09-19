@@ -42,6 +42,7 @@ def create_user():
             username=data["username"]
         ), 200
 
+
 @app.route('/api/process_food', methods=['POST'])
 def check_food():
     """

@@ -42,8 +42,8 @@ def test_get_recipes():
     """
 
     # ingredient = api_requests.get_product_by_name("rice")
-    response = api_requests.get_recipes_by_ingredient("rice", n_items=5)
-    print(response)
+    response = api_requests.get_recipes_by_ingredient("carrot", n_items=5)
+    # print(response)
 
     return
 
