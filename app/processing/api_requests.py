@@ -50,7 +50,8 @@ def get_food_name(img, n_items=1):
             "nutrition": {},
         }
         if(detected_item["nutrition_available"]):
-            product_metadata = get_nutrition_by_id(product_id=product_id)
+            child_most_id = get_most_child_id(detected_item)
+            product_metadata = get_nutrition_by_id(product_id=child_most_id)
         # obtaining nutrition from children, otherwise
         elif(not detected_item["nutrition_available"] and len(product_children) > 0):
             for child in product_children:
@@ -102,7 +103,7 @@ def get_nutrition_by_id(product_id):
     nutrition_facts = response["nutrition_facts"]
     for fact in nutrition_facts:
         # enforcing using metric measurements
-        if(fact["serving"]["unit"]["singular_name"] not in  ["gram"]):
+        if(fact["serving"]["unit"]["singular_name"] not in ["gram"]):
             continue
         amount = fact["serving"]["grams"]
         nutrition = fact["nutrition"]
@@ -113,5 +114,20 @@ def get_nutrition_by_id(product_id):
     }
 
     return metadata
+
+
+def get_most_child_id(item):
+    """
+    Recursively navigating the children of the detected item to get id of the
+    child-most item
+    """
+
+    id = item["id"]
+    if("children" not in item.keys()):
+        return id
+    children = item["children"]
+    if(len(children) > 0):
+        id = get_most_child_id(children[0])
+    return id
 
 #
