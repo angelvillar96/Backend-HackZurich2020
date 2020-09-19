@@ -181,8 +181,6 @@ def get_recipes_by_ingredient(ingredient, n_items=5):
         recipe_id = cur_recipe["_id"]
         recipe_score = cur_recipe["_score"]
 
-        # print(cur_recipe["_source"].keys())
-
         # general recipe information for the user
         recipe_title = cur_recipe["_source"]["title"]
         recipe_teaser = cur_recipe["_source"]["teasertext"]
@@ -250,25 +248,33 @@ def css_to_migros_product(css_product):
     """
 
     product_name = css_product["name"]
-    product_name = "Morcheln"
+    product_name = "Sofa"
     print(product_name)
 
     auth = Config.MIGROS_AUTH
-    get_recipe_url = f"https://hackzurich-api.migros.ch/hack/products/_search"
+    get_product_url = f"https://hackzurich-api.migros.ch/products"
     headers = {'Content-Type': 'application/json'}
+    # params = {"q": "name: Feen"}
+    params = {"query": {"nested":{"path":"products",
+                                  "query": {"match": {"name.id":product_name}}}}}
+    # params = {'query': {'match': {'name': product_name}}}
 
     # filters for retreving the product information
-    # data = {"query": {"nested":{"path":}}}
-
-    data = {"query": {"title":product_name}}
-                                # "query": {"term": {"ingredients.id":ingredient_id}}}}}
-
-    response = requests.get(get_recipe_url, json=data, auth=auth, headers=headers)
-    print(response)
+    response = requests.get(get_product_url, params=params, auth=auth, headers=headers)
     response = response.json()
 
     print("\n")
-    print(response)
+    print(response.keys())
+    print("\n")
+    print(len(response["products"]))
+    print("\n")
+    print(response["products"][0].keys())
+    # print(response["products"][0]["name"])
+    # names = [n["name"] for n in response["products"]]
+    names = [n["slug"] for n in response["products"]]
+    print(names)
+
+    exit()
 
     return migros_product
 
