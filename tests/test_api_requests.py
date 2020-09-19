@@ -4,6 +4,7 @@ Testing the functionality of the API Requests processing libraries
 
 import os
 import sys
+import json
 from PIL import Image
 import base64
 
@@ -43,8 +44,8 @@ def test_get_recipes():
     """
 
     # ingredient = api_requests.get_product_by_name("rice")
-    recipes = api_requests.get_recipes_by_ingredient("banana", n_items=5)
-    filtered_recipes = filter_recipes(recipes=recipes, username="test")
+    recipes = api_requests.get_recipes_by_ingredient(ingredient=None, n_items=5)
+    # filtered_recipes = filter_recipes(recipes=recipes, username="test")
 
     with open("recipes.json", "w") as f:
         json.dump(recipes, f)
