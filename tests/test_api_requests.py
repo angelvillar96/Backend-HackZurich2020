@@ -47,6 +47,7 @@ def test_get_recipes():
     recipes = api_requests.get_recipes_by_ingredient(ingredient=None, n_items=5)
     # filtered_recipes = filter_recipes(recipes=recipes, username="test")
 
+    print(len(recipes))
     with open("recipes.json", "w") as f:
         json.dump(recipes, f)
 
