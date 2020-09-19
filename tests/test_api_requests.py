@@ -16,13 +16,12 @@ def test_get_food_name():
     Testing that the results of the Bite Food Recognition System works fine
     """
 
-    img_path = os.path.join(os.getcwd(), "resources", "pizza.jpg")
-    img = Image.open(img_path)
-    # with open(img_path, "rb") as img:
-        # img_base64 = base64.b64encode(img.read())
-    # img = open(img_path, "rb")
+    img_path = os.path.join(os.getcwd(), "resources", "pizza.jpeg")
+    with open(img_path, "rb") as img:
+        img_base64 = base64.b64encode(img.read())
+    img_base64 = img_base64.decode("utf-8")
 
-    products = api_requests.get_food_name(img)
+    products = api_requests.get_food_name(img_base64)
     print(products)
 
     return
