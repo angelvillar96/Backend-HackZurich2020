@@ -116,6 +116,57 @@ def get_nutrition_by_id(product_id):
     return metadata
 
 
+def get_product_by_name(product_name):
+    """
+    Getting the nutrition and product parameters given product_name
+    """
+
+    api_key = Config.FOOD_RECOGNITION_KEY
+    get_product_url = "https://api-beta.bite.ai/products/search"
+    headers = {'Content-Type': 'application/json',
+                'Authorization': 'Bearer {0}'.format(api_key)}
+
+    params = {
+        "query": product_name
+    }
+    response = requests.get(get_product_url, params=params, headers=headers)
+    response = response.json()
+
+    product = response["results"][0]
+
+    return product
+
+
+
+
+def get_recipes_by_ingredient(ingredient, n_items=5):
+    """
+    Obtaining a bunch of recipes given an ingredient
+    """
+
+    # print(ingredient)
+    ingredient_id = ingredient["id"]
+    print(ingredient_id)
+
+    api_key = Config.FOOD_RECOGNITION_KEY
+    auth = Config.MIGROS_AUTH
+    get_recipe_url = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search"
+    get_recipe_url = f"https://api-beta.bite.ai/recipes/{ingredient_id}/"
+
+
+    headers = {'Content-Type': 'application/json',
+                'Authorization': 'Bearer {0}'.format(api_key)}
+    response = requests.get(get_recipe_url, headers=headers)
+
+    # data = {"query": {"match": {"title":{"query":"Spanferkel"}}}}
+    # response = requests.get(get_recipe_url, auth=auth)
+
+    response = response.json()
+    print(response)
+
+    return
+
+
 def get_most_child_id(item):
     """
     Recursively navigating the children of the detected item to get id of the

@@ -31,15 +31,28 @@ def test_get_product_params():
     """
     """
 
-    response = api_requests.get_product_by_name("salad", n_items=1)
-    # print(response)
+    response = api_requests.get_product_by_name("salad")
+    print(response)
 
     return
 
 
+def test_get_recipes():
+    """
+    """
+
+    ingredient =  api_requests.get_product_by_name("cheese")
+    response = api_requests.get_recipes_by_ingredient(ingredient, n_items=5)
+    print(response)
+
+    return
+
+
+
 if __name__ == "__main__":
     os.system("clear")
-    test_get_food_name()
+    # test_get_food_name()
     # test_get_product_params()
+    test_get_recipes()
 
 #
