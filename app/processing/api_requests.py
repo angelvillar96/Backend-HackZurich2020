@@ -157,7 +157,7 @@ def get_product_by_name(product_name):
     return product
 
 
-def get_recipes_by_ingredient(ingredient, n_items=5):
+def get_recipes_by_ingredient(ingredient=None, n_items=5):
     """
     Obtaining a bunch of recipes given an ingredient
 
@@ -167,25 +167,36 @@ def get_recipes_by_ingredient(ingredient, n_items=5):
         name of the ingredient to search recipes with
     """
 
+
     # translating ingredient name to german
-    translator = Translator()
-    ingredient_name = translator.translate(ingredient, src="en", dest="de")
-    try:
-        ingredient_name = ingredient_name.text
-    except Exception as e:
-        ingredient_name = ingredient
-    print(ingredient)
-    print(ingredient_name)
+    if(ingredient is not None):
+        translator = Translator()
+        ingredient_name = translator.translate(ingredient, src="en", dest="de")
+        try:
+            ingredient_name = ingredient_name.text
+        except Exception as e:
+            ingredient_name = ingredient
+        print(ingredient)
+        print(ingredient_name)
 
     auth = Config.MIGROS_AUTH
     get_recipe_url = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search"
     headers = {'Content-Type': 'application/json'}
 
-    params = {"query": {"nested":{"path":"ingredients",
-                                "query": {"term": {"ingredients.name.singular":ingredient_name}}}}}
+    # if ingredient is None, we get a random subset of recipes
+    if(ingredient is None):
+        params = {"query": {"nested":{"path":"tags",
+                            "query": {"term": {"tags.type":"contains"}}}}}
+    else:
+        params = {"query": {"nested":{"path":"ingredients",
+                            "query": {"term": {"ingredients.name.singular":ingredient_name}}}}}
 
     response = requests.post(get_recipe_url, json=params, auth=auth, headers=headers)
     response = response.json()
+
+    # with open("recipes.json", "w") as f:
+    #     json.dump(response, f)
+    # exit()
 
     returned_recipes = response["hits"]["hits"]
     recipes = []
