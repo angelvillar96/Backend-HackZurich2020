@@ -1,5 +1,6 @@
-from app import app
-from flask import jsonify
+from app import app, db
+from flask import jsonify, request
+from app.models import User, Food
 
 @app.route('/', methods=['GET'])
 def home():
@@ -14,6 +15,7 @@ def create_user():
         data = [{
             name: <Name of user>,
             username: <Username (unique)>,
+            password: <Password>,
             calories: <Calories user wants to eat>,
             restrictions: <Food restrictions user has>
         }]
@@ -29,6 +31,7 @@ def create_user():
         ), 409
     else:
         user = User(username=data["username"], name=data["name"], calories=data["calories"])
+        user.set_password(data["password"])
         db.session.add(user)
         db.session.commit()
         return jsonify(
@@ -36,7 +39,7 @@ def create_user():
             username=data["username"]
         ), 200
 
-@app.route('/api/process_food', methods=["POST"])
+@app.route('/api/process_food', methods=['POST'])
 def check_food():
     """
         Processes the image and returns suggestion for food
