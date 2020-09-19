@@ -9,6 +9,7 @@ import base64
 
 sys.path.append("..")
 import app.processing.api_requests as api_requests
+import app.processing.filter_recipes as filter_recipes
 
 
 def test_get_food_name():
@@ -42,8 +43,11 @@ def test_get_recipes():
     """
 
     # ingredient = api_requests.get_product_by_name("rice")
-    response = api_requests.get_recipes_by_ingredient("carrot", n_items=5)
-    # print(response)
+    recipes = api_requests.get_recipes_by_ingredient("banana", n_items=5)
+    filtered_recipes = filter_recipes(recipes=recipes, username="test")
+
+    with open("recipes.json", "w") as f:
+        json.dump(recipes, f)
 
     return
 

@@ -14,3 +14,4 @@ class Config(object):
     MIGROS_USERNAME = "hackzurich2020"
     MIGROS_PASSWORD = "uhSyJ08KexKn4ZFS"
     MIGROS_AUTH = HTTPBasicAuth(MIGROS_USERNAME, MIGROS_PASSWORD)
+    LOW_CARB_THR = 30
