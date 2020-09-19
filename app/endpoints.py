@@ -13,13 +13,14 @@ def create_user():
     """
         Create a user
 
-        data = [{
+        expects:
+        {
             name: <Name of user>,
             username: <Username (unique)>,
             password: <Password>,
             calories: <Calories user wants to eat>,
             restrictions: <Food restrictions user has>
-        }]
+        }
 
     """
 
@@ -45,10 +46,26 @@ def check_food():
     """
         Processes the image and returns suggestion for food
 
-        data = [{
+        expects:
+        {
             username: <Username> (used for authentification),
             image: <Image of food> (in base64)
-        }]
+        }
+
+        returns:
+        {
+            data: [{
+                calories: <Calories of food>,
+                amount: <Amount of food in grams>,
+                name: <Name of food>
+                nutrition: {
+                    total_fat: <Amount fat>,
+                    protein: <Amount protein>,
+                    ...
+                }
+            }],
+            message: "Processing successful"
+        }
 
     """
 
@@ -71,11 +88,12 @@ def confirm_food():
     """
         User confirms food and it gets added to database
 
-        data = [{
+        expects:
+        {
             username: <Username> (used for authentification),
             date_consumed: <Data when food was consumed> (fromat: DD/MM/YY),
             payload: <Data that was sent to confirm>
-        }]
+        }
 
     """
 
@@ -93,3 +111,16 @@ def confirm_food():
         return jsonify(
             message="Not Authorized"
         ), 401
+
+@app.route('/api/overview/<username>/<date>', methods=['GET'])
+def overview(username, date):
+    """
+        Overview of a users diet on a specific date
+
+        returns
+        data = [{
+            date_consumed: <Data when food was consumed> (fromat: DD/MM/YY),
+            payload: <Food that was consumed on that day>
+        }]
+
+    """
