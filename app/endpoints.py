@@ -1,8 +1,9 @@
 from app import app, db
 from flask import jsonify, request
 from app.models import User, Food
-from app.processing.api_requests import get_food_name
+from app.processing.api_requests import get_food_name, get_recipes_by_ingredient
 from app.processing.utils import process_overview
+
 
 @app.route('/', methods=['GET'])
 def home():
@@ -70,12 +71,17 @@ def check_food():
         }
 
     """
+    data = request.form
+    if data == None:
+        return jsonify(
+            message="No data"
+        ), 404
 
-    data = request.get_json()
     user = User.query.filter_by(username=data["username"])
 
     if user:
         response = get_food_name(data["image"])
+        print(response)
         return jsonify(
             message="Processing successful",
             data=response
@@ -145,3 +151,35 @@ def overview(username, date):
     return jsonify(
         data=data
     ), 200
+
+@app.route('/api/get_recipe', methods=['POST'])
+def get_recipe():
+    """
+        Gives the user a list of recommendations based on an ingredient
+
+        expects
+        {
+            username: <Username>,
+            ingredient: <Ingredient>
+        }
+
+        returns
+        {
+            recommendations: <List of recommendations sorted from best to worst>
+        }
+
+    """
+    data = request.get_json()
+    user = User.query.filter_by(username=data["username"]).first()
+
+    if user:
+        recommendations = get_recipes_by_ingredient(data["ingredient"])
+
+        filtered = recommendations#filter_sort_recipes(user, recommendations)
+        return jsonify(
+            recommendations=filtered
+        ), 200
+    else:
+        return jsonify(
+            message="Not Authorized"
+        ), 401
