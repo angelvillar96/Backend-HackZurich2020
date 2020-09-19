@@ -24,7 +24,7 @@ class User(db.Model):
 class Food(db.Model):
     food_id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64))
-    date_consumed = db.Column(db.DateTime, index=True, default=datetime.now)
+    date_consumed = db.Column(db.String(64))
     calories = db.Column(db.Integer)
     fat = db.Column(db.Integer)
     protein = db.Column(db.Integer)

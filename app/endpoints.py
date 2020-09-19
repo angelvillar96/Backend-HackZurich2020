@@ -2,6 +2,7 @@ from app import app, db
 from flask import jsonify, request
 from app.models import User, Food
 from app.processing.api_requests import get_food_name
+from app.processing.utils import process_overview
 
 @app.route('/', methods=['GET'])
 def home():
@@ -13,13 +14,14 @@ def create_user():
     """
         Create a user
 
-        data = [{
+        expects:
+        {
             name: <Name of user>,
             username: <Username (unique)>,
             password: <Password>,
             calories: <Calories user wants to eat>,
             restrictions: <Food restrictions user has>
-        }]
+        }
 
     """
 
@@ -45,10 +47,26 @@ def check_food():
     """
         Processes the image and returns suggestion for food
 
-        data = [{
+        expects:
+        {
             username: <Username> (used for authentification),
             image: <Image of food> (in base64)
-        }]
+        }
+
+        returns:
+        {
+            data: [{
+                calories: <Calories of food>,
+                amount: <Amount of food in grams>,
+                name: <Name of food>
+                nutrition: {
+                    total_fat: <Amount fat>,
+                    protein: <Amount protein>,
+                    ...
+                }
+            }],
+            message: "Processing successful"
+        }
 
     """
 
@@ -71,11 +89,12 @@ def confirm_food():
     """
         User confirms food and it gets added to database
 
-        data = [{
+        expects:
+        {
             username: <Username> (used for authentification),
             date_consumed: <Data when food was consumed> (fromat: DD/MM/YY),
             payload: <Data that was sent to confirm>
-        }]
+        }
 
     """
 
@@ -93,3 +112,35 @@ def confirm_food():
         return jsonify(
             message="Not Authorized"
         ), 401
+
+@app.route('/api/overview/<username>/<date>', methods=['GET'])
+def overview(username, date):
+    """
+        Overview of a users diet on a specific date
+
+        returns
+        {
+            date_consumed: <Data when food was consumed> (fromat: DD.MM.YY as string),
+            foods: [
+                {
+                    name: <Name of food>,
+                    calories: <Calories of food>,
+                    fat: <Amount of fat in grams>,
+                    carbs: <Amount of carbs in grams>,
+                    protein: <Amount of protein in grams>
+                },
+                ...
+            ],
+            total_calories: <Calories from all foods eaten on the specific date>,
+            total_fat: <Amount of fat eaten on the specific date>,
+            total_protein: <Amount of protein eaten on the specific date>,
+            total_carbs: <Amount of carbs eaten on the specific date>,
+            progress: <Percent of total calories>
+        }
+
+    """
+    user = User.query.filter_by(username=username).first()
+    data = process_overview(user, date) #returns list with all foods eaten on the specific date
+    return jsonify(
+        data=data
+    ), 200
