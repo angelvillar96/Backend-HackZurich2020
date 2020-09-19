@@ -2,6 +2,7 @@ from app import app, db
 from flask import jsonify, request
 from app.models import User, Food
 from app.processing.api_requests import get_food_name
+from app.processing.utils import process_overview
 
 @app.route('/', methods=['GET'])
 def home():
@@ -118,9 +119,28 @@ def overview(username, date):
         Overview of a users diet on a specific date
 
         returns
-        data = [{
-            date_consumed: <Data when food was consumed> (fromat: DD/MM/YY),
-            payload: <Food that was consumed on that day>
-        }]
+        {
+            date_consumed: <Data when food was consumed> (fromat: DD.MM.YY as string),
+            foods: [
+                {
+                    name: <Name of food>,
+                    calories: <Calories of food>,
+                    fat: <Amount of fat in grams>,
+                    carbs: <Amount of carbs in grams>,
+                    protein: <Amount of protein in grams>
+                },
+                ...
+            ],
+            total_calories: <Calories from all foods eaten on the specific date>,
+            total_fat: <Amount of fat eaten on the specific date>,
+            total_protein: <Amount of protein eaten on the specific date>,
+            total_carbs: <Amount of carbs eaten on the specific date>,
+            progress: <Percent of total calories>
+        }
 
     """
+    user = User.query.filter_by(username=username).first()
+    data = process_overview(user, date) #returns list with all foods eaten on the specific date
+    return jsonify(
+        data=data
+    ), 200
