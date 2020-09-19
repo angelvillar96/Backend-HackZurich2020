@@ -1,6 +1,7 @@
 from app import app, db
 from flask import jsonify, request
 from app.models import User, Food
+from app.processing.api_requests import get_food_name
 
 @app.route('/', methods=['GET'])
 def home():
@@ -55,12 +56,12 @@ def check_food():
     user = User.query.filter_by(username=data["username"])
 
     if user:
-        return jsonify(
-            message="Not Authorized"
-        ), 401
-    else:
         response = get_food_name(data["image"])
         return jsonify(
             message="Processing successful",
             data=response
         ), 200
+    else:
+        return jsonify(
+            message="Not Authorized"
+        ), 401
