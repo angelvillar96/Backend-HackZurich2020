@@ -32,7 +32,7 @@ def create_user():
 
     """
 
-    data = request.get_json()
+    data = request.form
     user = User.query.filter_by(username=data['username']).first()
 
     if user:
@@ -122,7 +122,7 @@ def confirm_food():
 
     """
 
-    data = request.get_json()
+    data = request.form
     user = User.query.filter_by(username=data["username"]).first()
 
     if user:
