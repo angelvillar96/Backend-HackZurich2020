@@ -190,6 +190,7 @@ def get_recipes_by_ingredient(ingredient=None, n_items=5):
     else:
         params = {"query": {"nested":{"path":"ingredients",
                             "query": {"term": {"ingredients.name.singular":ingredient_name}}}}}
+    # params["limit"] = 100
 
     response = requests.post(get_recipe_url, json=params, auth=auth, headers=headers)
     response = response.json()
