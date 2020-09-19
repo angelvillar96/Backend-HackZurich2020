@@ -5,6 +5,8 @@ Handling requests to Migros and Bite APIs for fetching data
 import json
 import requests
 
+from googletrans import Translator
+
 from config import Config
 
 
@@ -158,10 +160,20 @@ def get_product_by_name(product_name):
 def get_recipes_by_ingredient(ingredient, n_items=5):
     """
     Obtaining a bunch of recipes given an ingredient
+
+    Args:
+    -----
+    ingredient: string
+        name of the ingredient to search recipes with
     """
 
-    ingredient_name = ingredient["name"]
-    ingredient_name = "Reis"
+    # translating ingredient name to german
+    translator = Translator()
+    ingredient_name = translator.translate(ingredient, src="en", dest="de")
+    try:
+        ingredient_name = ingredient_name.text
+    except Exception as e:
+        ingredient_name = ingredient
 
     auth = Config.MIGROS_AUTH
     get_recipe_url = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search"
