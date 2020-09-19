@@ -6,7 +6,7 @@ def home():
     return "Hello world"
 
 
-@app.route('/create_user', methods=['POST'])
+@app.route('/api/create_user', methods=['POST'])
 def create_user():
     """
         Create a user
@@ -23,7 +23,7 @@ def create_user():
     data = request.get_json()
     user = User.query.filter_by(username=data['username']).first()
 
-    if user != None:
+    if user:
         return jsonify(
             message="Username already taken"
         ), 409
@@ -32,5 +32,32 @@ def create_user():
         db.session.add(user)
         db.session.commit()
         return jsonify(
-            message="User created succesfully"
+            message="User created succesfully",
+            username=data["username"]
+        ), 200
+
+@app.route('/api/process_food', methods=["POST"])
+def check_food():
+    """
+        Processes the image and returns suggestion for food
+
+        data = [{
+            username: <Username> (used for authentification),
+            image: <Image of food> (in base64)
+        }]
+
+    """
+
+    data = request.get_json()
+    user = User.query.filter_by(username=data["username"])
+
+    if user:
+        return jsonify(
+            message="Not Authorized"
+        ), 401
+    else:
+        response = get_food_name(data["image"])
+        return jsonify(
+            message="Processing successful",
+            data=response
         ), 200
