@@ -192,7 +192,7 @@ def get_recipe():
     if user:
         recommendations = get_recipes_by_ingredient(data["ingredient"])
 
-        filtered = filter_sort_recipes(recommendations, user)
+        filtered = recommendations#filter_sort_recipes(recommendations, user)
         return jsonify(
             recommendations=filtered
         ), 200
@@ -200,3 +200,8 @@ def get_recipe():
         return jsonify(
             message="Not Authorized"
         ), 401
+
+@app.route('/api/profile/<username>', methods=['GET'])
+def profile(username):
+
+    user = User.query.filter_by(username=username).first()
