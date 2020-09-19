@@ -7,7 +7,9 @@ class User(db.Model):
     name = db.Column(db.String(64))
     username = db.Column(db.String(64), unique=True)
     password_hash = db.Column(db.String(128))
+    calories = db.Column(db.Integer)
     foods = db.relationship('Food', backref='consumer', lazy='dynamic')
+    #TODO add restrictions
 
     def __reg__(self):
         return '<User {}>'.format(self.username)
