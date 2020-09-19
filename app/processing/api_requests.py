@@ -160,17 +160,17 @@ def get_recipes_by_ingredient(ingredient, n_items=5):
     Obtaining a bunch of recipes given an ingredient
     """
 
-    # print(ingredient)
-    ingredient_id = ingredient["id"]
-    ingredient_id = 88017
+    ingredient_name = ingredient["name"]
+    ingredient_name = "Reis"
 
     auth = Config.MIGROS_AUTH
     get_recipe_url = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search"
-
     headers = {'Content-Type': 'application/json'}
-    data = {"query": {"nested":{"path":"ingredients",
-                                "query": {"term": {"ingredients.id":ingredient_id}}}}}
-    response = requests.post(get_recipe_url, json=data, auth=auth, headers=headers)
+
+    params = {"query": {"nested":{"path":"ingredients",
+                                "query": {"term": {"ingredients.name.singular":ingredient_name}}}}}
+
+    response = requests.post(get_recipe_url, json=params, auth=auth, headers=headers)
     response = response.json()
 
     returned_recipes = response["hits"]["hits"]
