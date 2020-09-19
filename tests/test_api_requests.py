@@ -41,7 +41,8 @@ def test_get_recipes():
     """
     """
 
-    ingredient =  api_requests.get_product_by_name("cheese")
+    ingredient = api_requests.get_product_by_name("pizza")
+    ingredient = api_requests.css_to_migros_product(ingredient)
     response = api_requests.get_recipes_by_ingredient(ingredient, n_items=5)
     print(response)
 

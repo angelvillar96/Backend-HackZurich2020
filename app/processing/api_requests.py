@@ -12,9 +12,27 @@ def get_food_name(img, n_items=1):
     """
     Obtaining the food name and nutritious value from a porduct given an image
     of such food product. Uses Bite API
+
     Args:
     -----
-    img:
+    img: image in format base 64
+
+    Returns:
+    --------
+    products = [
+        {
+            css_id: 12121-15161-32165161,
+            name: cheese,
+            children: [{},{}]
+            ingredients: [ing1, ing2, ...],
+            amount:
+            nutrition: {
+                calories: 100,
+                sugar: 20,
+                ...
+            }
+        }
+    ]
     """
 
     api_key = Config.FOOD_RECOGNITION_KEY
@@ -137,8 +155,6 @@ def get_product_by_name(product_name):
     return product
 
 
-
-
 def get_recipes_by_ingredient(ingredient, n_items=5):
     """
     Obtaining a bunch of recipes given an ingredient
@@ -146,25 +162,115 @@ def get_recipes_by_ingredient(ingredient, n_items=5):
 
     # print(ingredient)
     ingredient_id = ingredient["id"]
-    print(ingredient_id)
+    ingredient_id = 88017
 
-    api_key = Config.FOOD_RECOGNITION_KEY
     auth = Config.MIGROS_AUTH
     get_recipe_url = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search"
-    get_recipe_url = f"https://api-beta.bite.ai/recipes/{ingredient_id}/"
 
-
-    headers = {'Content-Type': 'application/json',
-                'Authorization': 'Bearer {0}'.format(api_key)}
-    response = requests.get(get_recipe_url, headers=headers)
-
-    # data = {"query": {"match": {"title":{"query":"Spanferkel"}}}}
-    # response = requests.get(get_recipe_url, auth=auth)
-
+    headers = {'Content-Type': 'application/json'}
+    data = {"query": {"nested":{"path":"ingredients",
+                                "query": {"term": {"ingredients.id":ingredient_id}}}}}
+    response = requests.post(get_recipe_url, json=data, auth=auth, headers=headers)
     response = response.json()
+
+    returned_recipes = response["hits"]["hits"]
+    recipes = []
+    for cur_recipe in returned_recipes:
+
+        # api recipe identifiers
+        recipe_id = cur_recipe["_id"]
+        recipe_score = cur_recipe["_score"]
+
+        # print(cur_recipe["_source"].keys())
+
+        # general recipe information for the user
+        recipe_title = cur_recipe["_source"]["title"]
+        recipe_teaser = cur_recipe["_source"]["teasertext"]
+        recipe_nutrients = cur_recipe["_source"]["nutrients"]
+        _images_data = cur_recipe["_source"]["images"]
+        recipe_image_url = _images_data[0]["ratios"][0]["stack"].replace("{stack}", "medium")
+
+        # dont really know what this is
+        taxonomy_data = cur_recipe["_source"]["taxonomies"]
+        taxonomies = [t["name"] for t in taxonomy_data]
+
+        # cooking procedure : ingredients and instructions
+        cooking_time = cur_recipe["_source"]["duration_total_in_minutes"]
+        instructions = cur_recipe["_source"]["steps"][0]["description"]
+        _ingredients_data = cur_recipe["_source"]["ingredients"]
+        _ingredients = [i["name"]["singular"] for i in _ingredients_data]
+        _ingredients_size_data = cur_recipe["_source"]["sizes"]
+        ingredients = {}
+        ingredients["ingredients"] = _ingredients
+        ingredients["sizes"] = {}
+        for cur_size_data in _ingredients_size_data:
+            # print(cur_size_data)
+            number_eaters = cur_size_data["text"]
+            cur_ingredients = cur_size_data["ingredient_blocks"][0]["ingredients"]
+            cur_sizes = {c["text"]:c["amount"]["text"] for c in cur_ingredients}
+            ingredients["sizes"][number_eaters] = cur_sizes
+
+        # tags to display to the user
+        _tags_data = cur_recipe["_source"]["tags"]
+        contains_allergens = [t["name"] for t in _tags_data if t["type"] in ["contains"]]
+        nutrition_type = [t["name"] for t in _tags_data if t["type"] in ["nutrition-philosophy"]]
+        tags = [t["name"] for t in _tags_data if t["type"] in ["ocassions", "region",
+                                                              "season","nutrition-philosophy",
+                                                              "recipe-difficulty"]]
+        recipe = {
+            "id": recipe_id,
+            "score": recipe_score,
+            "general_info": {
+                "title": recipe_title,
+                "teaser": recipe_teaser,
+                "nutrition": recipe_nutrients,
+                "image_url": recipe_image_url
+            },
+            "cooking_instructions": {
+                "time": cooking_time,
+                "instructions": instructions,
+                "ingredients": ingredients
+            },
+            "allergens": contains_allergens,
+            "nutrition_type": nutrition_type,
+            "tags": tags
+        }
+        recipes.append(recipe)
+
+    with open("recipes.json", "w") as f:
+        json.dump(recipes, f)
+
+    return recipes
+
+
+def css_to_migros_product(css_product):
+    """
+    Given a product from the css database, finding the equivalent from the
+    migros database
+    """
+
+    product_name = css_product["name"]
+    product_name = "Morcheln"
+    print(product_name)
+
+    auth = Config.MIGROS_AUTH
+    get_recipe_url = f"https://hackzurich-api.migros.ch/hack/products/_search"
+    headers = {'Content-Type': 'application/json'}
+
+    # filters for retreving the product information
+    # data = {"query": {"nested":{"path":}}}
+
+    data = {"query": {"title":product_name}}
+                                # "query": {"term": {"ingredients.id":ingredient_id}}}}}
+
+    response = requests.get(get_recipe_url, json=data, auth=auth, headers=headers)
+    print(response)
+    response = response.json()
+
+    print("\n")
     print(response)
 
-    return
+    return migros_product
 
 
 def get_most_child_id(item):
