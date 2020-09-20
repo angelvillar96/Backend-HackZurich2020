@@ -82,7 +82,7 @@ def get_food_name(img, n_items=1):
                     break
 
         # joining product metadata with high-level daa
-        product = {**product, **product_metadata}
+        product = {**product, **product_metadata, "img":img}
         products.append(product)
 
     with open("test.json", "w") as f:
