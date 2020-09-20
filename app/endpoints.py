@@ -135,16 +135,12 @@ def confirm_food():
         }
 
     """
-    print("out")
-    data = request.form
+    data = request.get_json()
     user = User.query.filter_by(username=data["user"]).first()
-    print(user)
-
     if user:
-        food = Food(name=data["payload"]["name"], date_consumed=data["date_consumed"], calories=data["data"]["nutrition"]["calories"], fat=data["payload"]["nutrition"]["total_fat"], protein=data["payload"]["nutrition"]["protein"], sugar=data["payload"]["nutrition"]["sugars"], carbs=data["payload"]["nutrition"]["total_carb"], sodium=data["payload"]["nutrition"]["sodium"], consumer=user)
+        food = Food(name=data["data"]["name"], date_consumed=data["date_consumed"], calories=data["data"]["nutrition"]["calories"], fat=data["data"]["nutrition"]["total_fat"], protein=data["data"]["nutrition"]["protein"], sugar=data["data"]["nutrition"]["sugars"], carbs=data["data"]["nutrition"]["total_carb"], sodium=data["data"]["nutrition"]["sodium"], consumer=user)
         db.session.add(food)
         db.session.commit()
-        print(food)
         return jsonify(
             message="Food added successfully"
         ), 200
