@@ -60,6 +60,20 @@ def create_user():
             username=data["username"]
         ), 200
 
+@app.route('/api/login/<username>', methods=['GET'])
+def login(username):
+
+    user = User.query.filter_by(username=username).first()
+
+    if user:
+        return jsonify(
+            message="Login successful"
+        ), 200
+    else:
+        return jsonify(
+            message="Login failed"
+        ), 401
+
 
 @app.route('/api/process_food', methods=['POST'])
 def check_food():
@@ -121,14 +135,16 @@ def confirm_food():
         }
 
     """
-
+    print("out")
     data = request.form
-    user = User.query.filter_by(username=data["username"]).first()
+    user = User.query.filter_by(username=data["user"]).first()
+    print(user)
 
     if user:
-        food = Food(name=data["payload"]["name"], date_consumed=data["date_consumed"], calories=data["payload"]["nutrition"]["calories"], fat=data["payload"]["nutrition"]["total_fat"], protein=data["payload"]["nutrition"]["protein"], sugar=data["payload"]["nutrition"]["sugars"], carbs=data["payload"]["nutrition"]["total_carb"], sodium=data["payload"]["nutrition"]["sodium"], consumer=user)
+        food = Food(name=data["payload"]["name"], date_consumed=data["date_consumed"], calories=data["data"]["nutrition"]["calories"], fat=data["payload"]["nutrition"]["total_fat"], protein=data["payload"]["nutrition"]["protein"], sugar=data["payload"]["nutrition"]["sugars"], carbs=data["payload"]["nutrition"]["total_carb"], sodium=data["payload"]["nutrition"]["sodium"], consumer=user)
         db.session.add(food)
         db.session.commit()
+        print(food)
         return jsonify(
             message="Food added successfully"
         ), 200

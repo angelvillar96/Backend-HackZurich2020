@@ -25,7 +25,10 @@ def process_overview(user, date):
         total_carbs += food.carbs
         total_protein += food.protein
 
-    progress = user.calories / total_calories * 100
+    if total_calories == 0:
+        progress = 0
+    else:
+        progress = user.calories / total_calories * 100
 
     payload = {
         'date_consumed': date,
